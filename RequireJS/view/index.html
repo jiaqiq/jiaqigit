@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <script src="../src/require.js"></script>
+	<script src="../src/main.js"></script> -->
+	<script src="../src/require.js" data-main="../src/main"></script>
+	<title>index</title>
+</head>
+<body>
+	<button onclick="change()">点击</button>
+	<i class="fa fa-address-book fa-5x" aria-hidden="true"></i>
+</body>
+<script>
+	function change(){
+		// require(['jquery', 'angular'], function($, angular){
+		// 	$('body').css({'backgroundColor':'red'});
+		// })
+
+		require(['nonstandard'], function(m){
+			m.success();
+			m.modal();
+		})
+	}
+
+</script>
+</html>
