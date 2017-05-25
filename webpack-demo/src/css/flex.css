@@ -1,0 +1,5 @@
+/*postcss-loader*/
+/*autoprefixer*/
+.flex-div {
+	display: flex;
+}
