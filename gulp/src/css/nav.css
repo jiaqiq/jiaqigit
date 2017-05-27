@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-06-29 09:41:43
+ * @version $Id$
+ *//*导航样式*/
+.nav {position: relative; z-index: 5; width: 100%; height: 80px; background: #fff; box-shadow:0 3px 3px rgba(0,0,0,.2);}
+.nav h1 { margin-left: 7px; margin-top: 22px;}
+.nav .nav-r { position: relative; z-index: 2;}
+.nav .nav-r ul { font-size: 0; margin-right: 50px;}
+.nav .nav-r ul li { display:inline-block; *display: inline; *zoom: 1; font-size: 14px; height: 14px;}
+.nav .nav-r ul li a { -ms-transition: all .3s; transition: all .3s; display: block; line-height: 80px; width: 120px; height: 78px; border-bottom: 2px solid transparent; text-align: center;}
+.nav .nav-r ul li .focus{ transition-delay: .2s;border-bottom: 2px solid #ffb400; color: #fff;} 
+.nav .nav-r span { transition: all .5s; background: #045db2; height: 80px; width: 120px; position: absolute; left: 600px; top: 0; z-index: -1;}
+/*导航样式*/

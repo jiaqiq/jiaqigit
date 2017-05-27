@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-06-25 17:45:01
+ * @version $Id$
+ */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+body { font-family:"微软雅黑"; font-size:14px; /*background:#fff;*/}
+a {
+    text-decoration: none;
+}
+fieldset, img {
+    border: 0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+ol, ul {
+    list-style: none;
+}
+caption, th {
+    text-align: left;
+}
+q:before, q:after {
+    content: '';
+}
+abbr, acronym {
+    border: 0;
+}
+ul, li { list-style:none;}
+h1,h2,h3,h4,h5,h6 { font-weight:normal;}
+img { border:none; vertical-align:middle; font-size:0px;}
+.bk { border:1px solid red;}
+.fl { float:left;}
+.fr { float:right;}
+a { text-decoration:none; color:#000;}
+a:hover { color:#ea5505;}
+.wrapper { width:1200px; margin:0 auto;}
+/*通用父子盒子嵌套浮动问题解决，开始*/
+.clearfix:after { content:""; height:0; font-size:0px; visibility:hidden; display:block; clear:both;}
+.clearfix { *zoom:1;}
+/*通用父子盒子嵌套浮动问题解决，结束*/
+/*间隙层开始*/
+.space_hx { /*横向间隙*/
+    clear: both;
+    width: 100%;
+    height: 20px;
+    font-size: 1px;
+    overflow: hidden;
+}
+.space_zx { /*纵向间隙*/
+    float: left;
+    width: 10px;
+    font-size: 1px;
+    overflow: hidden;
+}
+/*间隙层结束*/

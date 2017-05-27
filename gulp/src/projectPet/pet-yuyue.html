@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>上门预约</title>
+    <link rel="stylesheet" type="text/css" href="css/mobile-reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="layer_mobile/need/layer.css">
+    <link rel="stylesheet" type="text/css" href="css/pet-yuyue.css">
+    <style type="text/css">
+        .bdShare{
+            background: #00f;
+            width: 5rem;
+            height: 0.8rem;
+            border:none;
+            border-radius:0.1rem;
+            margin-left: 1.25rem;
+            margin-top: 0.5rem;
+            color: #fff;
+            font-size: 0.4rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <i class="iconfont">&#xe605;</i>
+        <span>上门预约</span>
+    </div>
+    <div class="wrapper pet-yuyue">
+        <select class="s1">
+            <option>上午</option>
+            <option>下午</option>
+        </select>
+         <select class="s2">
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+        </select>
+        <span class="maohao">:</span>
+        <select>
+            <option>00</option>
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
+            <option>50</option>
+        </select>
+        <form class="form1">
+            <div class="circle active" id="c1"></div><label for="c1">男士</label>
+            <div class="circle" id="c2"></div><label for="c2">女士</label>
+            <input type="text" class="inp1" placeholder="请问宠友尊姓大名">
+            <input type="text" class="inp2" placeholder="留个手机号呗">
+            <input type="button" class="inp3" value="立即预约">
+        </form>
+        <p class="zhu">注：预约仅限当日，且仅当日有效</p>
+        <button class="bdShare">百度分享</button>
+        <!-- 百度分享 -->
+        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+
+    </div>
+    <script  src="js/base.js"></script>
+    <script  src="js/Zepto.js"></script>
+    <script  src="js/touch.js"></script>
+    <script  src="layer_mobile/layer.js"></script>
+    <script  src="js/yuyue.js"></script>
+</body>
+</html>

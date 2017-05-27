@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-06-29 09:41:43
+ * @version $Id$
+ */
+/*通用样式*/
+a,address,b,big,blockquote,body,cite,code,dd,del,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,label,legend,li,ol,p,pre,small,span,strong,ul,var{ margin: 0; padding: 0;}
+span:before, a:before, div:before, i:before, span:after, a:after, div:after, i:after { content: "";}
+body { font-family:"微软雅黑"; font-size: 14px;}
+.fl { float: left;}
+.fr { float: right;}
+.tl { display:inline-block; *display: inline; *zoom: 1;}
+h1, h2, h3, h4, h5, h6 { font-weight: normal;}
+ul, li { list-style: none;}
+a { text-decoration: none; color: #6e6e6e;} 
+img { border: none; vertical-align: middle; font-size: 0;}
+.wrapper { width: 1200px; margin: 0 auto;}
+.bk { border: 1px solid red;}
+.clearfix:after { content: ""; font-size: 0; clear: both; visibility: hidden; height: 0; display: block;}
+.clearfix { zoom:1;}
+i { font-style: normal;}
+.db { display: block;}
+.pb { position: absolute;}
+.pr { position: relative;}
+/*导航样式*/
+.nav {position: relative; z-index: 5; width: 100%; height: 80px; background: #fff; box-shadow:0 3px 3px rgba(0,0,0,.2);}
+.nav h1 { margin-left: 7px; margin-top: 22px;}
+.nav .nav-r { position: relative; z-index: 2;}
+.nav .nav-r ul { font-size: 0; margin-right: 50px;}
+.nav .nav-r ul li { display:inline-block; *display: inline; *zoom: 1; font-size: 14px; height: 14px;}
+.nav .nav-r ul li a { -ms-transition: all .3s; transition: all .3s; display: block; line-height: 80px; width: 120px; height: 78px; border-bottom: 2px solid transparent; text-align: center;}
+.nav .nav-r ul li .focus{ transition-delay: .2s;border-bottom: 2px solid #ffb400; color: #fff;} 
+.nav .nav-r span { transition: all .5s; background: #045db2; height: 80px; width: 120px; position: absolute; left: 600px; top: 0; z-index: -1;}
+/*导航样式*/
+
+/*banner样式*/
+.banner { width: 100%; position: relative; height: 435px;}
+.banner .b2 {opacity: 0;}
+.banner .h { width: 100%; min-width: 1200px; height: 435px;}
+.banner ul li { transition: opacity .5s; position: absolute; top: 0; left: 0;}
+.banner .t {position: absolute; z-index: 9; opacity:0; transition: all .5s;}
+.banner .b1 .t1 { left: 369px; top: 105px; -webkit-transform: translate(-50px,0); transform: translate(-50px,0);}
+.banner .b1 .t2 { left: 454px; top: 207px; -webkit-transform: translate(-50px,0); transform: translate(-50px,0);}
+.banner .b1 .t3 { left: 435px; top: 294px; -webkit-transform: translate(-50px,0); transform: translate(-50px,0);}
+.banner .b1 .t4 { left: 492px; top: 355px; -webkit-transform: translate(-50px,0); transform: translate(-50px,0);}
+.banner .b2 .t1 { left: 734px; top: 112px; -webkit-transform: translate(0,-50px); transform: translate(0,-50px);}
+.banner .b2 .t2 { left: 871px; top: 125px; -webkit-transform: translate(0,-50px); transform: translate(0,-50px);}
+.banner .b2 .t3 { left: 970px; top: 101px; -webkit-transform: translate(0,-50px); transform: translate(0,-50px);}
+.banner .b2 .t4 { left: 1058px; top: 131px; -webkit-transform: translate(0,-50px); transform: translate(0,-50px);}
+.banner:hover .t{ opacity: 1; -webkit-transform: translate(0,0); transform: translate(0,0);}
+.banner:hover .t2 { transition-delay: .5s;}
+.banner:hover .t3 { transition-delay: 1s;}
+.banner:hover .t4 { transition-delay: 1.5s;}
+.banner .context { transition: all .3s; opacity: 0;}
+.banner .b1 .context { font: 16px "楷体"; color: #000; top: 156px; left: 580px; z-index: 5; -webkit-transform: rotate(90deg); transform: rotate(90deg); -webkit-transform-origin: 0 0; transform-origin: 0 0;}
+.banner .b2 .context { font: 22px "楷体"; color: #000; top: 239px; left: 789px;}
+.banner:hover .context { transition-delay: 2s; opacity: 1;}
+.banner .b2 .context i { font-size: 12px;}
+/*banner样式*/
+
+/*板块通用样式*/
+.title { padding-top: 70px; color: #7a7a7a; font-size: 12px; text-transform: uppercase;}
+.title h3 { font-size: 22px; line-height: 35px; color: #3c3c3c;}
+/*板块通用样式*/
+
+/*集团简介样式*/
+.description { width: 100%; text-align: center;}
+.description .txt { width: 1000px; font-size: 12px; line-height: 25px; color: #5f5f5f; margin: 0 auto; padding:25px 0;}
+.description a { width: 100px; margin: 0 auto; margin-bottom: 120px; overflow: hidden;}
+.description .more { transition: all .1s ease-in .3s; position: relative; margin: 10px 0; width: 100px; background:url(../images/ab-icon.png) no-repeat 35px -15px; height: 13px; line-height: 35px; color: #fff;}
+.description .more:before { position: absolute; width: 70px; border: 1px solid #045db2; height: 23px; top: -10px; left: 0; z-index: -1; -webkit-transform: translate(15px,5px); transform: translate(15px,5px); transition: all .4s; opacity: 0;}
+.description .more:after { position: absolute; width: 100px; background: #045db2; height: 33px; top: -10px; left: 0; z-index: -1; -webkit-transform: translate(0,0); transform: translate(0,0); transition: all .4s; opacity: 1;}
+.description a:hover .more { background:url(../images/ab-icon.png) no-repeat 35px 1px;}
+.description a:hover .more:before { -webkit-transform: translate(0,0); transform: translate(0,0); width: 98px; height: 31px; opacity: 1;}
+.description a:hover .more:after { -webkit-transform: translate(15px,5px); transform: translate(15px,5px); width: 70px; height: 23px; opacity: 0;}
+/*集团简介样式*/
+
+/*middle样式*/
+.middle {overflow: hidden; position: relative; text-align: center; width: 100%; height: 252px; background: url(../images/ab-m.jpg) no-repeat 0 0; background-size: 100% 100%;}
+.middle .txt { padding-top: 120px; font-size: 16px; color: #fff;}
+.middle .txt i { font-size: 25px; font-weight: bolder; text-transform: uppercase;}
+.middle .showy { top: -50px; left: 50%; margin-left: -277px;}
+.middle .showy .box {width: 555px; height: 120px; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-perspective: 1000px; perspective: 1000px;}
+.middle .showy span { top: 0; bottom: 0; right: 0; left: 0; border: 1px solid #ededed; border-bottom: 1px solid transparent; -webkit-transform: translateZ(500px); transform: translateZ(500px); transition: all .3s; opacity: 0;}
+.middle .showy span.on { -webkit-transform: translateZ(0); transform: translateZ(0); opacity: 1;}
+.middle .showy span i { height: 1px; background: #ededed; bottom: -1px;}
+.middle .showy span i:nth-of-type(1) { left: -1px; width: 63px;}
+.middle .showy span i:nth-of-type(2) { left: 152px; width: 23px;}
+.middle .showy span i:nth-of-type(3) { left: 265px; width: 23px;}
+.middle .showy span i:nth-of-type(4) { left: 378px; width: 23px;}
+.middle .showy span i:nth-of-type(5) { left: 491px; width: 63px;}
+.middle .showy ul { font-size: 0; color: #fff; bottom: -10px; height: 20px; line-height: 20px; left: 62px; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-perspective: 1000px; perspective: 1000px;}
+.middle .showy ul li { display: inline-block; *display: inline; *zoom: 1; font-size: 18px; margin-right: 23px; width: 90px; opacity: 0;-webkit-transform:translateZ(500px);transform:translateZ(500px);}
+.middle .showy ul li:nth-of-type(1) { transition: all .3s ease-out .3s;}
+.middle .showy ul li:nth-of-type(2) { transition: all .3s ease-out .5s;}
+.middle .showy ul li:nth-of-type(3) { transition: all .3s ease-out .6s;}
+.middle .showy ul li:nth-of-type(4) { transition: all .3s ease-out .7s;}
+.middle .showy ul .show { -webkit-transform: translateZ(0); transform: translateZ(0); opacity: 1;}
+/*middle样式*/
+
+/*发展历程样式*/
+.development { width: 100%; text-align: center; position: relative;}
+.development .schedule { width: 100%; height: 65px; overflow: hidden; margin-bottom: 25px;}
+.development .schedule ul{ padding-top: 25px; top: 0; left: 510px; width: 2050px;}
+.development .schedule ul li { float: left; width: 170px; height: 40px; font-size: 16px; cursor: pointer; transition: all .3s; box-sizing: border-box; color: #7a7a7a;}
+.development .schedule ul li:hover { color: #045dba; padding-left: 10px; }
+.development .schedule ul .focus { width: 180px; color: #045db2; font-size: 22px;}
+.development .line-h { top: 187px; left: 0; width: 100%; height: 1px; background: #dedede;}
+.development .schedule:after { position: absolute; bottom: 0; left: 50%; margin-left:-50px; width: 100px; height: 2px; background: #045dba;}
+.development .content { width: 1200px; height: 1015px; overflow: hidden;}
+.development .content .line-v { top: 0; left: 50%; width: 1px; height: 100%; margin-top: -10px; background: #dedede; z-index: -1;}
+.development .content .out { height: 860px; overflow: hidden; width: 14400px;}
+.development .content .out>li { position: relative; width: 1200px; overflow: hidden; float: left; height: 1130px;}
+.development .content .in { transform-style: preserve-3d; perspective: 1000px;}
+.development .content .in li { position: absolute; transition: transform .5s cubic-bezier(.79,.14,.15,.86);}
+.development .content .in li a { width: 465px; height: 210px; border: 1px solid #969696; border-radius: 2px; transition: all .3s;}
+.development .content .in li p { padding: 40px 20px 0; text-align: justify; font-size: 14px; color: #6e6e6e; line-height: 25px;}
+.development .content .in li .t { transition: all .3s; bottom: -1px; left: 0; width: 100%; height: 43px; line-height: 43px; background: #969696; color: #fff; font-size: 16px; padding: 0 17px; box-sizing: border-box;}
+.development .content .in li:nth-child(odd){ left: 50%; margin-left: 45px; transform: translateX(1000px) translateZ(-500px);}
+.development .content .in li:nth-child(even){ right: 50%; margin-right: 45px; transform: translateX(-1000px) translateZ(-500px);}
+.development .content .in li.on { transform: translateX(0);}
+.development .content .in li:nth-child(1){ top: 75px;}
+.development .content .in li:nth-child(2){ top: 260px;}
+.development .content .in li:nth-child(3){ top: 405px;}
+.development .content .in li:nth-child(4){ top: 590px;}
+.development .content .in li:nth-child(5){ top: 735px;}
+.development .content .in li:nth-child(6){ top: 920px;}
+.development .content .in li:nth-child(odd) .t { text-align: left;}
+.development .content .in li:nth-child(even) .t { text-align: right;}
+.development .content .in li:nth-child(odd) .t span{ float: right;}
+.development .content .in li:nth-child(even) .t span{ float: left;}
+.development .content .in li a:hover { border: 1px solid #045db2; box-shadow: 0 5px 8px rgba(0,0,0,.3); -webkit-transform: translateY(-10px); transform: translateY(-10px);}
+.development .content .in li a:hover .t { background: #045db2;} 
+.development .content .in li i{ visibility: hidden; bottom: 13px; position: absolute; width: 11px; height: 11px; background: #fff; border-radius: 9px; border: 3px solid #969696; z-index: 10; transition: border .3s; transition: visibility .3s .5s;}
+.development .content .in li a:hover i{ border: 3px solid #045db2;}
+.development .content .in li:nth-child(odd) i{ left: -54px;}
+.development .content .in li:nth-child(even) i{ right: -54px;}
+.development .content .box1 { width: 40px; height: 40px; bottom: 100px; cursor: pointer;}
+.development .content .box1 span { transition: all .1s ease-in .3s; position: relative; width: 40px; background:url(../images/ab-development-icon.png) no-repeat 0 0; height: 40px;}
+.development .content .box1 span:before { border-radius: 20px; position: absolute; width: 30px; border: 1px solid #045db2; height: 30px; top: 0; left: 0; z-index: -1; -webkit-transform: translate(5px,5px); transform: translate(5px,5px); transition: all .4s; opacity: 0;}
+.development .content .box1 span:after { border-radius: 20px; position: absolute; width: 40px; background: #045db2; height: 40px; top: 0; left: 0; z-index: -1; -webkit-transform: translate(0,0); transform: translate(0,0); transition: all .4s; opacity: 1;}
+.development .content .box1:hover span { background:url(../images/ab-development-icon.png) no-repeat -40px 0;}
+.development .content .box1:hover span:before { -webkit-transform: translate(0,0); transform: translate(0,0); width: 38px; height: 38px; opacity: 1;}
+.development .content .box1:hover span:after { -webkit-transform: translate(5px,5px); transform: translate(5px,5px); width: 30px; height: 30px; opacity: 0;}
+.development .content .prev span { background:url(../images/ab-development-icon1.png) no-repeat -40px 0;}
+.development .content .prev:hover span {background:url(../images/ab-development-icon1.png) no-repeat 0 0;}
+.development .content .prev{ right: 50%; margin-right: 5px;}
+.development .content .next{ left: 50%; margin-left: 5px;}
+.jump1 { -webkit-animation: move 1s infinite .5s; animation: move 1s infinite .5s;}
+	@-webkit-keyframes move{
+		0 { -webkit-transform: translateY(0); transform: translateY(0);}
+		50% { -webkit-transform: translateY(10px); transform: translateY(10px);}
+		100% { -webkit-transform: translateY(0); transform: translateY(0);}
+	}
+	@keyframes move{
+		0 { -webkit-transform: translateY(0); transform: translateY(0);}
+		50% { -webkit-transform: translateY(10px); transform: translateY(10px);}
+		100% { -webkit-transform: translateY(0); transform: translateY(0);}
+	}
+.jump2 { -webkit-animation: move 1s infinite; animation: move 1s infinite;}
+	@keyframes move{
+		0 { -webkit-transform: translateY(0); transform: translateY(0);}
+		50% { -webkit-transform: translateY(10px); transform: translateY(10px);}
+		100% { -webkit-transform: translateY(0); transform: translateY(0);}
+	}
+/*发展历程样式*/
+
+/*中部标志样式*/
+.mlogo { width: 100%; height: 252px; background: url(../images/ab-mlogo-bg.png) repeat-x 0 0; overflow: hidden;}
+.mlogo ul li { width: 300px; height: 252px; cursor: pointer; overflow: hidden; transition: all .5s cubic-bezier(1,-0.04,0,.99); -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-perspective: 1000px; perspective: 1000px;}
+.mlogo ul li:after {position: absolute; content: ""; bottom: 0; transition: all .5s; left: 0; width: 100%; height: 0;} 
+.mlogo ul li:hover:after { height: 100%; bottom: 0; background: rgba(255,255,255,.1);} 
+.mlogo ul li img { position: absolute; left: -100%; transition:all .5s cubic-bezier(.79,.14,.15,.86); -webkit-transform: translateZ(0); transform: translateZ(0);}
+.mlogo ul li:hover img{-webkit-animation:move .5s;animation:move .5s; left: 0;}
+	@keyframes move{
+		0 { -webkit-transform: translateZ(0); transform: translateZ(0);}
+		50% { -webkit-transform: translateZ(-500px); transform: translateZ(-500px);}
+		100% { -webkit-transform: translateZ(0); transform: translateZ(0);}
+	}
+.mlogo ul li:nth-child(even){ -webkit-transform: translateY(250px); transform: translateY(250px);}
+.mlogo ul li:nth-child(odd){ -webkit-transform: translateY(-250px); transform: translateY(-250px);}
+.mlogo ul li.on { -webkit-transform: translateY(0); transform: translateY(0);}
+/*中部标志样式*/
+
+/*msg样式*/
+.msg { width: 100%; height: 216px;}
+.msg ul { padding-top: 70px;}
+.msg ul li {transition: all .2s cubic-bezier(.79,.14,.15,.86); width: 400px; height: 65px; text-align: center; line-height: 65px; font-size: 16px; color: #3b3b3b; overflow: hidden;}
+.msg ul li:nth-child(1){ background: url(../images/ab-msg-lg1.png) no-repeat 0 -57px;}
+.msg ul li:nth-child(2){ background: url(../images/ab-msg-lg2.png) no-repeat 0 -57px;}
+.msg ul li:nth-child(3){ background: url(../images/ab-msg-lg3.png) no-repeat 0 -57px;}
+.msg ul li p { -webkit-transform: translateY(0); transform: translateY(0); transition: all .2s cubic-bezier(.79,.14,.15,.86);}
+.msg ul li span { font-size: 14px; color: #606060;}
+.msg ul li:hover { background-position: 0 8px;}
+.msg ul li:hover p { -webkit-transform: translateY(-65px); transform: translateY(-65px);}
+/*msg样式*/
+
+/*更多开始 */
+.more {width:100%;height:70px;background-color: #1c1c1c;margin-top: 54px;}
+.more ul li {float:left;}
+.more ul li a{display: block;width:200px;height:70px;line-height: 70px;font-size: 14px;color:#fff;text-align: center;background-color: #1c1c1c; transition:all .5s; color:#808080;}
+.more ul li a img {vertical-align: middle; margin-right:8px; transition:all .5s;}
+.more ul li a:hover img{-webkit-transform: rotateY(180deg);transform: rotateY(180deg); margin-right:15px;}
+.more ul li a:hover {background-color: #045db2; color:#e7e7e7;}
