@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>canvas弹跳的小球</title>
+</head>
+<body>
+    <!-- 先创建画布 -->
+    <canvas id="pad" style="border:1px solid #000"></canvas>
+    <script type="text/javascript">
+        var padNode=document.getElementById("pad");
+        window.addEventListener("resize", resizeCanvas(), false);
+        function resizeCanvas(){
+            padNode.width = window.innerWidth;
+            padNode.height = window.innerHeight;
+        }
+        var ctx=padNode.getContext("2d");
+        //小球x轴的初始值为100.
+        // var x=100;
+        // var y=100;
+        // // 小球的速度
+        // var vx=3;
+        // var vy=5;
+        // // 重力
+        // var gravity=0.5;
+        // setInterval(function(){
+        //     //清除一个矩形区域，没有这一句的话，小球会连续不断绘制叠加。
+        //     ctx.clearRect(0,0,padNode.width,padNode.height);
+        //     //开始绘制
+        //     ctx.beginPath();
+        //     //arc(水平坐标，垂直坐标，半径，圆周起始位置，弧长 Math.PI是半圆  Math.PI*2是整个圆  0.5为四分之一，true为逆时针)
+        //     ctx.arc(x,y,50,0,360/180*Math.PI,true);
+        //     // fillStyle是填充样式，这句需要放在fill之前。
+        //     ctx.fillStyle="#f00";
+        //     ctx.fill();
+        //     // 小球移动
+        //     y=y+vy;
+        //     x=x+vx;
+        //     vy=vy+gravity;
+        //      // 小球的碰撞检测
+        //     if(x>padNode.width-50||x<50){
+        //         vx=vx*-1;
+        //     }
+        //     if(y>padNode.height-50){
+        //         vy=vy*-0.8;
+        //     }
+        //     // abs()绝对值
+        //     if(Math.abs(vy)<0.2&&y>padNode.height-50){
+        //         gravity=0;
+        //         vy=0;
+        //     }
+        //     if(vy==0){
+        //         vx=vx*0.98;
+        //     }
+        // },10);
+        // 
+        var ballList=[];
+        // ----------创建ball对象------------
+        function ball(x,y,r,vx,vy,col){
+            this.x=x;
+            this.y=y;
+            this.r=r;
+            this.vx=vx;
+            this.vy=vy;
+            this.gravity=0.5;
+            this.col=col;
+            this.drawBall=function(){
+                ctx.beginPath();
+                ctx.fillStyle=col;
+                ctx.arc(this.x,this.y,this.r,0,360/180*Math.PI,true);
+                ctx.fill();
+            }
+            this.move=function(){
+                // 小球移动
+                this.y=this.y+this.vy;
+                this.x=this.x+this.vx;
+                this.vy=this.vy+this.gravity;
+                // 小球的 X轴 碰撞检测
+                this.x=this.x+this.vx;
+                if(this.x>padNode.width-this.r||this.x<this.r){
+                    this.vx=this.vx*-1;
+                }
+                //小球的 Y轴 碰撞检测
+                if(this.y>padNode.height-this.r){
+                    this.vy=this.vy*-0.8;
+                }
+                // abs()绝对值
+                if(Math.abs(this.vy)<0.2&&this.y>padNode.height-this.r){
+                    this.gravity=0;
+                    this.vy=0;
+                }
+                if(this.vy==0){
+                    this.vx=this.vx*0.98;
+                }
+            }
+        }
+        padNode.onmousemove=function(e){
+            //随机小球颜色
+            var str='rgb('+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+")";
+            //e.clientX,e.clientY 鼠标跟随,Math.random()*50+1随机小球大小
+            var newBall=new ball(e.clientX,e.clientY,Math.random()*30+1,Math.random()*10-5,0,str);
+            ballList.push(newBall);
+        }
+        setInterval(function(){
+            ctx.clearRect(0,0,padNode.width,padNode.height);
+            for(var i=0;i<ballList.length; i++){
+                ballList[i].drawBall();
+                ballList[i].move();
+            }
+            //性能优化：当 小球大于300个的时候，删除数组的第一个。
+            if(ballList.length>200){
+                ballList.shift();
+            }
+        },10);
+    </script>
+</body>
+</html>

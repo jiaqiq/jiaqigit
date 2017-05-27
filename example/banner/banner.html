@@ -1,0 +1,57 @@
+<!doctype html>
+ <html lang="zh-cn">
+ <head>
+   <meta charset="UTF-8">
+   <title>轮播图</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/lunbostyle.css">
+ </head>
+ <body>
+    <div class="banner" id="banner-box">
+        <img src="images/banner-1.jpg" alt="" id="pic">
+        <div class="btn-container clearfix">
+            <div class=" btn btn1" id="btn1"> < </div>
+            <div class=" btn btn2" id="btn2"> > </div>
+        </div>
+    </div>
+    
+ <script>
+    var imgArr=["images/banner-1.jpg","images/banner-2.jpg","images/banner-3.jpg","images/banner-4.jpg"];
+    var index=0;
+    var interval;
+    function change(){
+        index=(index+1)%4;
+        show();
+    }
+    function show(){
+        var imgObj=document.getElementById('pic');
+            imgObj.src=imgArr[index];
+    }
+    function timer(){
+        interval=setInterval(change,2000);
+    }
+    timer();
+   
+    var btn1=document.getElementById('btn1');
+    var btn2=document.getElementById('btn2');
+        btn1.onclick=function(){
+            clearInterval(interval);
+            index-=1;
+            if(index<0){
+                index=imgArr.length-1;
+            }
+            show();
+            timer(); 
+        }
+        btn2.onclick=function(){
+            clearInterval(interval);
+            index+=1;
+            if(index>imgArr.length-1){
+                index=0;
+            }
+            show();
+            timer();
+        }
+ </script> 
+ </body>
+ </html> 
