@@ -1,0 +1,16 @@
+{
+  "name": "webpack-test2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --config webpack.config.js --progress --display-modules --colors --display-reasons"
+  },
+  "author": "jiaqi",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.5.1"
+  }
+}
