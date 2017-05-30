@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>随机数排序</title>
+</head>
+<body>
+    <script type="text/javascript">
+    //生成10个1~100内的随机数
+    //count为生成个数
+    //使用排序函数可以升序也可以降序。
+        function rand(count){
+            var arr=[];
+            for(var i=0; i<count;){
+                rand=Math.ceil(Math.random()*100);
+                for(var j=0; j<arr.length; j++){
+                    //判断是否重复
+                    if(rand==arr[j]){
+                        break;
+                    }
+                }
+                //当生成数为单数的时候，前面补0;
+                if(rand<10){
+                    rand="0"+rand;
+                } 
+                if(j==arr.length){
+                    arr.push(rand);
+                    i++;
+                }
+            }
+            // 若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+            // 若 a 等于 b，则返回 0。
+            // 若 a 大于 b，则返回一个大于 0 的值。
+            // 排序函数
+            function sortNumber(a,b)
+            {
+            return b-a;
+            }
+            return arr.sort(sortNumber);
+        }
+         document.write(rand(10));
+//左边补0函数。
+         // function padLeft(pad,str,len){
+         //    for(var i=0; i<len; i++){
+         //        if(str.length<len){
+         //           var str=pad.concat(str);
+         //        }
+         //    }
+         //    return str;
+         // }
+         // document.write(padLeft("0","a",5));
+    </script>
+</body>
+</html>
