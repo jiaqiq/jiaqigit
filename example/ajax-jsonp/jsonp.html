@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<button id="btn">点我</button>
+<ul id="thelist">
+    <li>产品1</li>
+    <li>产品2</li>
+    <li>产品3</li>
+    <li>产品4</li>
+</ul>
+<script>
+    function Ajax(){
+         $.ajax({
+        url:"https://suggest.taobao.com/sug?q=%E5%85%85%E7%94%B5%E5%AE%9D&code=utf-8&area=c2c&nick=&sid=null&callback=jsonp1",
+        dataType:"jsonp",
+        type:"get",
+        success:function(dattt){
+            // console.log(dattt);
+            var str="";
+            for(var i=0; i<dattt.result.length;i++){
+                str += "<li>" +dattt.result[i][0] + "</li>";
+            }
+            $("#thelist").append(str);
+        },
+        error:function(){
+            console.log("加载错误！");
+        }
+    });
+    }
+    $("#btn").click(function(){
+        Ajax();
+    });
+</script>
+
+</body>
+</html>
