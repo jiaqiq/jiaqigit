@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>flexslider</title>
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="flexslider.css"/>
+<script type="text/javascript" src="jquery.flexslider.js"></script>
+<script language="javascript">
+$(window).load(function() {
+  $('.flexslider').flexslider({
+	animation: "slide",
+  slideshowSpeed: 2000
+  });
+});
+</script>
+
+</head>
+
+<body>
+<section class="slider">
+    <div class="flexslider">
+      <ul class="slides">
+        <li>
+            <img src="images/banner.jpg" alt="" />
+        </li>
+        <li>
+            <img src="images/banner2.jpg" alt="" />
+        </li>
+        <li>
+            <img src="images/banner3.jpg" alt="" />
+        </li>
+      </ul>
+    </div>
+</section>
+</body>
+</html>
