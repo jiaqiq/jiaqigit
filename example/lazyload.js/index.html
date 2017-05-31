@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0
+        }
+        img{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img class="lazy" alt="" width="640" height="480" data-original="img/1.jpg"/>
+    <img class="lazy" alt="" width="640" height="480" data-original="img/2.jpg"/>
+    <img class="lazy" alt="" width="640" height="480" data-original="img/3.jpg"/>
+    <img class="lazy" alt="" width="640" height="480" data-original="img/4.jpg"/>
+    <img class="lazy" alt="" width="640" height="480" data-original="img/5.jpg"/>
+    <img class="lazy" alt="" width="640" height="480" data-original="img/6.jpg"/>
+    <!-- <img src="img/1.jpg" width="500" height="700" alt="">
+    <img src="img/2.jpg" width="500" height="700" alt="">
+    <img src="img/3.jpg" width="500" height="700" alt="">
+    <img src="img/4.jpg" width="500" height="700" alt="">
+    <img src="img/5.jpg" width="500" height="700" alt="">
+    <img src="img/6.jpg" width="500" height="700" alt=""> -->
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+<script src="js/jquery-lazyload.js"></script>
+<script>
+    $(function(){
+        $('.lazy').lazyload({
+            // event:'click',
+            effect:'fadeIn',
+            threshold:480
+        });
+    });
+</script>
+</body>
+</html>

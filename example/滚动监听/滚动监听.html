@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		#nav {
+			width: 200px;
+			position: fixed;
+			left: 100px;
+			top: 300px;
+		}
+		#nav li {
+			width: 200px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-size: 25px;
+			color: black;
+			margin-top: 4px;
+			list-style: none;
+			background-color: #999; 
+		}
+		#box div {
+			width: 100%;
+			height: 800px;
+			line-height: 800px;
+			text-align: center;
+			font-size: 200px;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<ul id="nav">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	<div id="box">
+		<div style="background-color:purple">1</div>
+		<div style="background-color:green">2</div>
+		<div style="background-color:red">3</div>
+		<div style="background-color:blue">4</div>
+	</div>
+</body>
+<script>
+	var nav=document.getElementById('nav');
+	var box=document.getElementById('box');
+	function clearNodes(ele){
+		for(var i=ele.childNodes.length-1;i>=0;i--){
+			if(ele.childNodes[i].nodeType!==1){
+				ele.removeChild(ele.childNodes[i]);
+			}
+		}
+	}
+	clearNodes(nav);
+	clearNodes(box);
+	var x;
+	nav.childNodes[0].style.backgroundColor='#fff';
+	for(var i=0;i<nav.childNodes.length;i++){
+		nav.childNodes[i].index=i;
+		nav.childNodes[i].onclick=function(){
+			x=this.index;
+			document.body.scrollTop=box.childNodes[x].offsetTop;
+			document.documentElement.scrollTop=box.childNodes[x].offsetTop;
+			for(var j=0;j<nav.childNodes.length;j++){
+				nav.childNodes[j].style.backgroundColor='#999';
+			}
+			this.style.backgroundColor='#fff';
+		}
+	}
+	window.onscroll=function(){
+		for(var i=0;i<box.childNodes.length;i++){
+			if(document.body.scrollTop){
+				y=document.body.scrollTop;
+			}else{
+				y=document.documentElement.scrollTop;
+			}
+			if(box.childNodes[i].offsetTop-y<200){
+				for(var j=0;j<nav.childNodes.length;j++){
+					nav.childNodes[j].style.backgroundColor='#999';
+				}
+				nav.childNodes[i].style.backgroundColor='#fff';
+			}
+		}
+	}
+
+</script>
+</html>
