@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>测试事件捕获和冒泡</title>
+    <style>
+        *{margin:0;padding:0;}
+        li{width:100px;height:24px;float:left;margin:10px;}
+    </style>
+</head>
+<body>
+    <!-- <div id="id1" style="width:200px; height:200px; position:absolute;top:100px;left:100px; background-color:blue; z-index:4">  
+        <div id="id2" style="width:200px; height:200px; position:absolute; 
+            top:20px; left:70px; background-color:green; z-index:1">
+        </div>  
+    </div> -->
+    <script>
+    //案例1 result:id2， id1
+// document.getElementById('id1').addEventListener('click', function() { console.log('id1');}, false);
+// document.getElementById('id2').addEventListener('click', function() { console.log('id2');}, false);
+//案例2 result:id2， id1
+// document.getElementById('id1').addEventListener('click', function() { console.log('id1');}, false);
+// document.getElementById('id2').addEventListener('click', function() { console.log('id2');}, true);
+// //案例3 result:id1， id2
+// document.getElementById('id1').addEventListener('click', function() { console.log('id1');}, true);
+// document.getElementById('id2').addEventListener('click', function() { console.log('id2');}, false);
+// //案例4 result:id1， id2
+// document.getElementById('id1').addEventListener('click', function() { console.log('id1');}, true);
+// document.getElementById('id2').addEventListener('click', function() { console.log('id2');}, true);
+
+//      //阻止冒泡
+//      function cancelBubble(event){
+//         var event = event || window.event;
+//         if(event.stopPropagation){
+//             event.stopPropagation();
+//         }else if(event.cancelBubble){
+//             event.cancelBubble = true;
+//         }else{
+//             return false;//用于处理使用对象属性注册的事件处理程序
+//         }
+//      }
+// //阻止浏览器的默认行为
+//    function cancelHandler(event){
+//     var event = event || window.event;
+//     if(event.preventDefault){
+//         event.preventDefault();
+//     }else if(event.returnValue){
+//         event.returnValue = false;
+//     }else{
+//         return false;//用于处理使用对象属性注册的事件处理程序
+//     }
+// }
+    </script> 
+    <!-- <div id="container" style="width:300px;height:300px;background:#f00";>事件捕获和冒泡</div> -->
+    <script type="text/javascript">
+    //测试兼容性
+    // var container = document.getElementById("container");
+    // var container1 = function(){console.log("add")};
+    // var container2 = function(){console.log("att")};
+    //     if(container.addEventListener){
+            // container.addEventListener('click',function(){console.log("add")},false);
+        //     container.addEventListener('click',container1,false);
+        // }else if(container.attachEvent){
+            // container.attachEvent('onclick',function(){console.log("att")}); 
+        //     container.attachEvent('onclick',container2);
+        // }
+    </script>
+<ul id="container">
+          <li><a href="javascript:void(0)">第1个</a></li>
+          <li><a href="javascript:void(0)">第2个</a></li>
+          <li><a href="javascript:void(0)">第3个</a></li>
+          <li><a href="javascript:void(0)">第4个</a></li>
+          <li><a href="javascript:void(0)">第5个</a></li>
+          <li><a href="javascript:void(0)">第6个</a></li>
+          <li><a href="javascript:void(0)">第7个</a></li>
+          <li><a href="javascript:void(0)">第8个</a></li>
+          <li><a href="javascript:void(0)">第9个</a></li>
+          <li><a href="javascript:void(0)">第10个</a></li>
+          <li><a href="javascript:void(0)">第11个</a></li>
+          <li><a href="javascript:void(0)">第12个</a></li>
+          <li><a href="javascript:void(0)">第13个</a></li>
+          <li><a href="javascript:void(0)">第14个</a></li>
+          <li><a href="javascript:void(0)">第15个</a></li>
+          <li><a href="javascript:void(0)">第16个</a></li>
+          <li><a href="javascript:void(0)">第17个</a></li>
+          <li><a href="javascript:void(0)">第18个</a></li>
+          <li><a href="javascript:void(0)">第19个</a></li>
+          <li><a href="javascript:void(0)">第20个</a></li>
+          <li><a href="javascript:void(0)">第21个</a></li>
+          <li><a href="javascript:void(0)">第22个</a></li>
+          <li><a href="javascript:void(0)">第23个</a></li>
+          <li><a href="javascript:void(0)">第24个</a></li>
+          <li><a href="javascript:void(0)">第25个</a></li>
+          <li><a href="javascript:void(0)">第26个</a></li>
+          <li><a href="javascript:void(0)">第27个</a></li>
+          <li><a href="javascript:void(0)">第28个</a></li>
+          <li><a href="javascript:void(0)">第29个</a></li>
+          <li><a href="javascript:void(0)">第30个</a></li>
+          <li><a href="javascript:void(0)">第31个</a></li>
+          <li><a href="javascript:void(0)">第32个</a></li>
+          <li><a href="javascript:void(0)">第33个</a></li>
+          <li><a href="javascript:void(0)">第34个</a></li>
+          <li><a href="javascript:void(0)">第35个</a></li>
+          <li><a href="javascript:void(0)">第36个</a></li>
+          <li><a href="javascript:void(0)">第37个</a></li>
+          <li><a href="javascript:void(0)">第38个</a></li>
+          <li><a href="javascript:void(0)">第39个</a></li>
+          <li><a href="javascript:void(0)">第40个</a></li>
+          <li><a href="javascript:void(0)">第41个</a></li>
+          <li><a href="javascript:void(0)">第42个</a></li>
+          <li><a href="javascript:void(0)">第43个</a></li>
+          <li><a href="javascript:void(0)">第44个</a></li>
+          <li><a href="javascript:void(0)">第45个</a></li>
+          <li><a href="javascript:void(0)">第46个</a></li>
+          <li><a href="javascript:void(0)">第47个</a></li>
+          <li><a href="javascript:void(0)">第48个</a></li>
+          <li><a href="javascript:void(0)">第49个</a></li>
+          <li><a href="javascript:void(0)">第50个</a></li>
+          <li><a href="javascript:void(0)">第51个</a></li>
+          <li><a href="javascript:void(0)">第52个</a></li>
+          <li><a href="javascript:void(0)">第53个</a></li>
+          <li><a href="javascript:void(0)">第54个</a></li>
+          <li><a href="javascript:void(0)">第55个</a></li>
+          <li><a href="javascript:void(0)">第56个</a></li>
+          <li><a href="javascript:void(0)">第57个</a></li>
+          <li><a href="javascript:void(0)">第58个</a></li>
+          <li><a href="javascript:void(0)">第59个</a></li>
+          <li><a href="javascript:void(0)">第60个</a></li>
+          <li><a href="javascript:void(0)">第61个</a></li>
+          <li><a href="javascript:void(0)">第62个</a></li>
+          <li><a href="javascript:void(0)">第63个</a></li>
+          <li><a href="javascript:void(0)">第64个</a></li>
+          <li><a href="javascript:void(0)">第65个</a></li>
+          <li><a href="javascript:void(0)">第66个</a></li>
+          <li><a href="javascript:void(0)">第67个</a></li>
+          <li><a href="javascript:void(0)">第68个</a></li>
+          <li><a href="javascript:void(0)">第69个</a></li>
+          <li><a href="javascript:void(0)">第70个</a></li>
+          <li><a href="javascript:void(0)">第71个</a></li>
+          <li><a href="javascript:void(0)">第72个</a></li>
+          <li><a href="javascript:void(0)">第73个</a></li>
+          <li><a href="javascript:void(0)">第74个</a></li>
+          <li><a href="javascript:void(0)">第75个</a></li>
+          <li><a href="javascript:void(0)">第76个</a></li>
+          <li><a href="javascript:void(0)">第77个</a></li>
+          <li><a href="javascript:void(0)">第78个</a></li>
+          <li><a href="javascript:void(0)">第79个</a></li>
+          <li><a href="javascript:void(0)">第80个</a></li>
+          <li><a href="javascript:void(0)">第81个</a></li>
+          <li><a href="javascript:void(0)">第82个</a></li>
+          <li><a href="javascript:void(0)">第83个</a></li>
+          <li><a href="javascript:void(0)">第84个</a></li>
+          <li><a href="javascript:void(0)">第85个</a></li>
+          <li><a href="javascript:void(0)">第86个</a></li>
+          <li><a href="javascript:void(0)">第87个</a></li>
+          <li><a href="javascript:void(0)">第88个</a></li>
+          <li><a href="javascript:void(0)">第89个</a></li>
+          <li><a href="javascript:void(0)">第90个</a></li>
+          <li><a href="javascript:void(0)">第91个</a></li>
+          <li><a href="javascript:void(0)">第92个</a></li>
+          <li><a href="javascript:void(0)">第93个</a></li>
+          <li><a href="javascript:void(0)">第94个</a></li>
+          <li><a href="javascript:void(0)">第95个</a></li>
+          <li><a href="javascript:void(0)">第96个</a></li>
+          <li><a href="javascript:void(0)">第97个</a></li>
+          <li><a href="javascript:void(0)">第98个</a></li>
+          <li><a href="javascript:void(0)">第99个</a></li>
+          <li><a href="javascript:void(0)">第100个</a></li>
+      </ul> 
+      <script>
+      //************添加事件公共函数*****************
+            function addEvent(node,event,handler){
+                if(node.addEventListener){
+                    node.addEventListener(event,handler,false);
+                }else if(node.attachEvent){
+                    node.attachEvent("on"+event,handler);
+                }
+            }
+        // ***************结束***************  
+        // 
+        // 下面函数中的e可以换成其他名字      
+            addEvent(document.getElementById('container'),'click',function(e){
+                e = e || window.event;
+                var target = e.target || e.srcElement;
+                console.log(target.innerHTML);
+            });
+      </script>     
+</body>
+</html>

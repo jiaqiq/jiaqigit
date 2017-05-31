@@ -1,0 +1,29 @@
+https://daneden.github.io/animate.css/    animate动画效果
+
+http://iconfont.cn/  字体图标库
+
+http://www.runoob.com/html/html-tutorial.html  菜鸟教程
+
+http://www.cnblogs.com/wzzl/  A心语博客
+
+http://cubic-bezier.com/#.17,.67,.83,.67  贝塞尔曲线
+
+http://caniuse.com/#home  can i use 查询浏览器支持
+
+http://www.swiper.com.cn/  swiper中文网
+
+https://github.com/  代码托管
+
+http://www.ruanyifeng.com/blog/2012/06/sass.html  sass用法指南-阮一峰
+
+https://cnodejs.org/topic/4f50dd9798766f5a610b808a  理解Node.js异步非阻塞
+
+http://www.php100.com/ PHP100中文网
+
+http://www.aliyue.net/小月博客
+
+http://www.gulpjs.com.cn/ gulp中文网
+
+http://www.mamicode.com/info-detail-1221706.html  gulp的使用
+
+http://www.codesec.net/view/178491.html  js变量提升

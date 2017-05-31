@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时跳转url</title>
+</head>
+<body>
+<!-- 写个h1用于显示倒计时 -->
+<h1 id="h"></h1>
+    <script type="text/javascript">
+    //获取h1对象
+    var nowh=document.getElementById("h");
+    //声明倒计时的初始值
+    var num=10;
+    // 倒计时函数
+    function change(){
+        if(num>0){
+           num--;
+           //把倒计时显示在h1内容里面
+           nowh.innerHTML="抢红包倒计时："+num;
+           // 每秒执行一次减1
+           setTimeout(change,1000); 
+        }else{
+            //倒计时完成后跳转的页面
+            location.href="http://www.baidu.com";
+        }
+    }
+    //设置这个函数在多少秒后执行
+    setTimeout(change,2000);
+    </script>
+</body>
+</html>

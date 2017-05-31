@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D</title>
+    <style>
+    div{
+        margin: 50px auto;
+    }
+    .div1{
+        width: 200px;
+        height: 200px;
+        background: #f00;
+        transition:transform 3s;
+    }
+    .div1:hover{
+        transform:rotate(360deg);
+    }
+    .div2{
+        width: 100px;
+        height: 100px;
+        background: #ff6700;
+        transition:transform 3s;
+    }
+    .div2:hover{
+        transform:scale(2,2);
+    }
+    .div3{
+        width: 100px;
+        height: 100px;
+        background: #00f;
+        transition:background 3s;
+    }
+    .div3:hover{
+        background: #f0f;
+    }
+    .div4{
+        width: 100px;
+        height: 100px;
+        background: #ff0f00;
+        transition:all 3s;
+    }
+    .div4:active{
+        transform:rotate(360deg);
+        background: #e5eecc;
+    }
+    .div5{
+        width: 210px;
+        height: 210px;
+        border: 1px dashed #ff6700;
+        border-radius:50%;
+        position: relative;
+    }
+    i{
+        position: absolute;
+        width: 50px;
+        height: 100px;
+        border-radius: 50%;
+        display: block;
+        transition:transform 3s;
+        transform-origin:50% bottom;
+    }
+    .deg1{
+        transform:rotate(0deg);
+    }
+    .deg2{
+        transform:rotate(120deg);
+    }
+    .deg3{
+        transform:rotate(240deg);
+    }
+    #one{
+        top:5px;
+        left: 50%;
+        margin-left: -25px;
+        background: #f00;
+    }
+    #two{
+        top:5px;
+        right:50%;
+        margin-right: -25px;
+        background: #0f0;
+        transform:rotate(120deg);
+    }
+    #three{
+        top:5px;
+        left:50%;
+        margin-left: -25px;
+        background: #00f;
+        transform:rotate(240deg);
+    }
+    #center-circle{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        background: #ff6700;
+        position: absolute;
+        top:50%;
+        margin-top:-25px;
+        left: 50%;
+        margin-left:-25px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="div1">旋转360°</div>
+    <div class="div2">放大1倍</div>
+    <div class="div3">颜色改变</div>
+    <div class="div4">点击旋转时颜色改变</div>
+    <div class="div5">
+        <i id="one"></i>
+        <i id="two"></i>
+        <i id="three"></i>
+        <i id="center-circle">中心</i>
+    </div>
+    <script type="text/javascript">
+    // var centerCircle=document.getElementById("center-circle");
+    // var one=document.getElementById("one");
+    // var two=document.getElementById("two");
+    // var three=document.getElementById("three");
+    // function moveCircle(){
+    //     var degArr=["deg1","deg2","deg3"];
+    //     for(var i=0;i<degArr.length;i++){
+    //         var index=i%degArr.length;
+    //         if(index==0){
+    //             addClass("deg1","deg2","deg3");
+    //             one.style.transform="rotate(120deg)";
+    //             two.style.transform="rotate(240deg)";
+    //             three.style.transform="rotate(360deg)";
+    //         }else if(index==1){
+    //             addClass("deg3","deg1","deg2");
+    //             one.style.transform="rotate(120deg)";
+    //             two.style.transform="rotate(240deg)";
+    //             three.style.transform="rotate(360deg)";
+    //         }else{
+    //             addClass("deg2","deg3","deg1");
+    //             one.style.transform="rotate(120deg)";
+    //             two.style.transform="rotate(240deg)";
+    //             three.style.transform="rotate(360deg)";
+    //         }
+    //     }
+    // }
+    // function addClass(deg1,deg2,deg3){
+    //     one.style.className=deg1;
+    //     two.style.className=deg2;
+    //     three.style.className=deg3;
+    // }
+    // centerCircle.onclick=function(){
+    //     var interval=setInterval(moveCircle,1000);
+    // }
+    </script>
+</body>
+</html>

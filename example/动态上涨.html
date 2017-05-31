@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>动态上涨</title>
+    <style type="text/css">
+        #parentBox{
+            width: 200px;
+            height: 200px;
+            border: 1px dashed #666;
+            margin: 0 auto;
+            overflow: hidden;
+            /*让文本超出隐藏*/
+        }
+        #childBox{
+            width:200px;
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div id="parentBox">
+        <div id="childBox">
+            <p id="content" style="display:none;">内容区域内容区域内容区域内容区域内容区域内容区域内容区域内容区域内容区域</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+    //获取dom对象
+        var parentBox=document.getElementById("parentBox");
+        var childBox=document.getElementById("childBox");
+        var content=document.getElementById("content");
+        upHeight(parentBox,childBox,100);
+    //upHeight为上涨的高度
+    //parentBox为父容器
+    //childBox为动态上涨部分
+    //showHeight为想要让他上涨的高度（预期高度）;
+        function upHeight(parentBox,childBox,showHeight){
+             parentBox.style.position="relative";
+             childBox.style.position="absolute";
+                childBox.style.bottom=0;
+                childBox.style.height=0+"px";
+                var interval;
+            parentBox.onmouseenter=function(){
+                 if(interval!=-1){//判断定时器是否清零
+                       clearInterval(interval);
+                    }
+                interval=setInterval(function(){
+                var height=parseFloat(childBox.style.height);
+                    height+=10;
+                    if(height>=showHeight){
+                        height=showHeight;
+                        clearInterval(interval);
+                    }
+                    childBox.style.height=height+"px";
+                },100);
+                content.style.display="block"; 
+            };
+            parentBox.onmouseleave=function(){
+                if(interval!=-1){
+                    clearInterval(interval);
+                }
+                interval=setInterval(function(){
+                    var height=parseFloat(childBox.style.height);
+                        height-=10;
+                        if(height<=0){
+                            height=0;
+                            clearInterval(interval);
+                            //把display放在定时器中，内容跟随下降消失，不会立刻消失。
+                            content.style.display="none"; 
+                        }
+                        childBox.style.height=height+"px";
+                },100);
+                
+            }
+        }   
+    </script>
+</body>
+</html>

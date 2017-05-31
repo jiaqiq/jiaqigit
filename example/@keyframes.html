@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>@keyframes</title>
+    <style>
+    .myMove{
+        width: 100px;
+        height: 100px;
+        background: #f00;
+        position: relative;
+        animation:my 10s infinite;
+        -moz-animation:my 5s infinite; /* Firefox */
+        -webkit-animation:my 5s infinite; /* Safari and Chrome */
+        -o-animation:my 5s infinite; /* Opera */
+    }
+    @keyframes my {
+         0% {top:0; left:0; background: #f00;width: 200px;height: 200px;}
+        25% {top:200px; left:0; background: #f0f;width: 300px; height: 300px;}
+        50% {top:200px; left:200px; background: #00f; width: 400px; height: 400px;}
+        75% {top:0; left:200px; background: #0f0; width: 500px; height:500px;}
+        100%{top:50px; left:50px; background: #f0f; width: 100px; height: 100px;}
+    }
+    </style>
+</head>
+<body>
+    <div class="myMove"></div>
+</body>
+</html>

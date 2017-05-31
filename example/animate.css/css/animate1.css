@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.circle{
+    width: 211px;
+    height: 211px;
+    /*border: 1px solid #00f;*/
+    margin: 20px auto;
+    box-sizing: border-box;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 10px 20px 20px rgba(0,0,0,0.6);
+    background: -webkit-radial-gradient(30% 40%, circle, rgba(255,255,255,0.3) 5%, rgba(0,0,255,0.3) 90%);       
+}
+.bg{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 1196px;
+    height: 211px;
+    background: #00f url(../images/world-map-one-color.png) no-repeat;
+}
