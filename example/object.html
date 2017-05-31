@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var date = new Date();
+		document.write(date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()+'<br/>');
+
+		//使用Object创建对象
+		var user = new Object();
+		user.name = "张一";
+		user.pwd = 12345678;
+		user.showInfo = function(){
+			document.write(this.name +'-'+this.pwd+'<br/>');
+		}
+
+		//字面量创建对象  应用场景是：用来给函数传递多参数
+		var obj = {
+			name: "zhangsan",
+			pwd: "123456"
+		}
+		alert(obj['name']);
+
+        function User(name, pwd){
+        	this.name = name,
+        	this.pwd = pwd 
+        }
+
+        //字面量创建的对象作为参数传递
+        function A(obj){
+        	document.write(obj.pwd+'<br/>');
+        }
+        A(obj);
+        // 每个函数都有一个原型
+        User.prototype.userInfo = function(){
+        	document.write(this.name+'-'+this.pwd+'-'+'我是userInfo原型共享'+'<br/>');
+        }
+
+        var user1 = new User(obj.name, obj.pwd);
+        var user2 = new User("李四", 654321);
+
+        function Animal(name, color){
+        	this.name = name,
+        	this.color = color,
+        	this.dongzuo = function(){
+        		user1.userInfo();
+        	}
+        }
+        
+        user2.userInfo();
+
+        var animal1 = new Animal("熊猫", "白色");
+        animal1.dongzuo();
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function Good() {
+		this.iq = 120;
+		this.study = function(){
+			console.log("高效学习");
+		}
+	}
+
+	function Bad() {
+		this.play = function(){
+			console.log("好好玩");
+		}
+
+		this.extend = function(obj){
+			for(var k in obj){
+				this[k] = obj[k];
+			}
+		}
+	}
+
+	var good = new Good();
+	var bad = new Bad();
+
+	bad.extend(good);
+	bad.study();
+
+	console.log(bad);
+</script>
+</html>

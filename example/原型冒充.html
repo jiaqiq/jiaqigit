@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+
+// call和apply作用是动态改变this的指向
+	function Good() {
+		this.iq = 120;
+		this.study = function(){
+			console.log("高效学习");
+		}
+	}
+
+	function Bad() {
+		Good.call(this);  //对象冒充 ，这里call作用是将this指向Bad;
+		this.play = function(){
+			console.log("好好玩");
+		}
+	}
+
+	var good = new Good();
+	var bad = new Bad();
+
+	good.study();
+	bad.play();
+	bad.study();
+</script>
+</html>

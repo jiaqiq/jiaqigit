@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// arguments 不定参数
+	function sum(){
+		for(var sum=0,i=0; i<arguments.length; i++){
+			 sum += arguments[i];
+		}
+
+		console.log(sum);
+	}
+
+	sum(1);
+	sum(1, 2);
+	sum(1, 2, 3);
+	sum(1, 2, 3, 4);
+
+</script>
+</html>
