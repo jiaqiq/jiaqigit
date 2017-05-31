@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<button id="btn">点击加载</button>
+<ul id="theList">
+    <li>chanpin1</li>
+    <li>chanpin2</li>
+    <li>chanpin3</li>
+</ul>
+<input type="text" id="inp">
+   <script>
+   function Ajax(key){
+    $.ajax({
+        url:'http://suggest.taobao.com/sug?code=utf-8&q=y&_ksTS=1474204597447_371&callback=jsonp372&k=1&area=c2c&bucketid=9',
+        type:'get',
+        dataType:'jsonp',
+        success:function(data){
+            var str="";
+            for(var i=0; i<data.result.length; i++){
+                str += '<li>'+data.result[i][0]+'</li>';
+            }
+            $('#theList').append(str);
+        },
+        error:function(){
+            alert('加载错误！');
+        }
+   });
+   }
+   $("#inp").keyup(function(){
+        if($(this).val()!=''){
+            Ajax($(this).val());
+        }
+   });
+   $("#btn").click(function(){
+        Ajax();
+    });
+   </script>
+</body>
+</html>

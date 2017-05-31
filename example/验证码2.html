@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>验证码2</title>
+<style>
+.yzCode{
+    border: none;
+    color:blue;
+    letter-spacing: 4px;
+    margin-left: 5px;
+    font-size:16px;
+    width:100px;
+    text-align:center;
+}
+.change{
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+<form>
+    <a href="" class="change">看不清 换一张</a>
+    <input type="text" readonly id="auth-Code" class="yzCode" onclick="getAuthCode()" />
+    <input type="text" maxlength="6" id="inputcheck"/>
+    <!-- <button>换一张</button> -->
+    <input type="button" onclick="checkCode()" value="确定"/>
+</form>
+    <script> 
+    // 推荐
+    var newArr=[],yzCode=[],str="";
+    function getAuthCode(){
+        for(var i=0; i<=9; i++){
+            newArr.push(i);
+        }
+        for(var i=0; i<26; i++){
+            newArr.push(String.fromCharCode(65+i));
+        }
+        for(var i=0; i<26; i++){
+            newArr.push(String.fromCharCode(97+i));
+        } 
+        for(var i=0; i<6; i++){
+            var rand = Math.floor(Math.random()*62);//索引值从0开始，容易出错。
+            yzCode.push(newArr[rand].toString());
+        }
+            str = yzCode.join('');
+    };
+    getAuthCode();
+
+    function checkCode() {
+        var authCode = document.getElementById("inputcheck").value;
+        if(authCode == "") {
+            alert("请输入验证码");
+            return;
+        } else if(authCode != str){
+            alert("验证码不正确，请重新输入");
+            getAuthCode();
+            return;
+        } else{
+            alert("验证码输入正确");
+            return;
+        }
+    }
+
+//     var inputNode = document.getElementById("check").value;
+//     inputNode.onblur() = function();
+// function(){
+//     if()
+// }
+    // var btnNode = document.getElementById("btn-change");
+    var authCodeNode = document.getElementById("auth-Code");
+    authCodeNode.value = yzCode.join('');
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历对象的属性和方法</title>
+</head>
+<body>
+    <script type="text/javascript">
+    function Hero(name,type,home,weapon){
+        this.name=name;
+        this.type=type;
+        this.home=home;
+        //判断他是否赋有值，如果没有赋值的话，采用此默认值
+        this.weapon=weapon?weapon:"剑";
+        this.skill=function(){
+            alert(this.name+"向敌人发动了普通攻击");
+        }
+    }
+    //实例化了一个对象，武器采用默认值
+    var user=new Hero('张三','战士','新手村');
+    //删除user的属性
+    delete user.name;
+    //可以删除同样也可以添加属性
+    user.sex='男';
+    document.write("user包含如下属性和方法：<hr/>");
+    //如果只输出i结果是函数的所有属性和方法名
+    for( var i in user){
+        //通过typeof判断他们的类型，判断他是方法还是属性
+        if(typeof(user[i])=='function'){
+            document.write("方法："+i+":"+user[i]+"<br />");
+        }else{
+            document.write("属性："+i+":"+user[i]+"<br />");
+        }
+    }
+    </script>
+</body>
+</html>

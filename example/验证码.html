@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>验证码</title>
+</head>
+<body>
+        <form>
+            <input type="text" readonly id="auth"/>
+            <!-- <input type="text" value="请输入验证码"/> -->
+            <button onclick="authcode2()">刷新</button>
+        </form>
+    <script>
+var newArr2=[],num4,str4;
+  
+      function authcode2(startNum,endNum,startNum2,endNum2,startNum3,endNum3){
+                do{
+                num4 = Math.floor(Math.random()*(endNum-startNum+1)+startNum);
+                    if(startNum2<=num4&&num4<=endNum2 || startNum3<=num4&&num4<=endNum3){
+                        continue;
+                    }else{
+                        str4 = String.fromCharCode(num4);
+                        newArr2.push(str4);
+                    }
+                }
+                while(newArr2.length<6);
+            return newArr2
+        }
+        auth.value=authcode2(48,122,58,64,91,96).join("");
+    </script>
+</body>
+</html>

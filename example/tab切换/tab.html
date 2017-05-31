@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <style>
+        a{
+            text-decoration:none !important;
+            color:#000;
+        }
+        .tab-list li{
+            float: left;
+            width:80px;
+            height: 30px;
+            line-height: 30px;
+            list-style-type:none;
+            margin-right: 30px;
+            text-align: center;
+        }
+        #content-list div{
+            width:500px;
+            height:300px;
+            border:1px solid #000;
+            margin-top:20px;
+            position: absolute;
+        }
+        .list-1{
+            background: #f00;
+            z-index: 1;
+        }
+        .list-2{
+            background: #f0f;
+        }
+        .list-3{
+            background: orange;
+        }
+        .selected{
+            background: orange;
+            border: 1px solid #f00;
+        }
+    </style>
+</head>
+<body>
+<ul class="tab-list clearfix"> 
+    <li class="selected"><a href="#">页面一</a></li> 
+    <li><a href="#">页面二</a></li> 
+    <li><a href="#">页面三</a></li> 
+</ul> 
+<div id="content-list">
+    <div class="list-1">内容一</div> 
+    <div class="list-2">内容二</div> 
+    <div class="list-3">内容三</div> 
+</div>
+
+    <script>
+
+//搭配选项卡切换
+var tabList=$(".tab-list li");
+tabList.mouseover(function(){
+  var index=$(this).index();
+  tabList.eq(index).addClass("selected").siblings().removeClass('selected');
+  $("#content-list").children().eq($(this).index()).show().siblings().hide();
+});
+    </script>
+</body>
+</html>

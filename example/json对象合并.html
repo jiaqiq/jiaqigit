@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    var a ={"a":"1","b":"2","c":"3"}
+    var b ={"c":"3","d":"4","e":"5"}
+    var str = '{"f":"6","g":"7"}'
+    var c = $.extend({},a,b);
+    console.log(c);
+    document.write(JSON.stringify(c));
+</script>
+</body>
+</html>
