@@ -9,6 +9,6 @@ export class AnotherProductService implements ProductService{
     return new Product(1, "小米6", 2999, "最新小米手机");
   }
 
-  constructor(private logger:LoggerService ) { }
+  constructor(public logger:LoggerService ) { }
 
 }

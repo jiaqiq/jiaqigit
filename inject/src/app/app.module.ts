@@ -23,16 +23,19 @@ import { AnotherProductService } from './shared/another-product.service';
   ],
   providers: [{
     provide: ProductService,
-    userFactory: () => {
-      let logger = new LoggerService();
-      let dev = Math.random() > 0.5;
-      if(dev) {
+    useFactory: (logger:LoggerService, appConfig) => {
+      if(appConfig.isDev) {
         return new ProductService(logger);
       }else{
         return new AnotherProductService(logger);
       }
-    }
-  }, LoggerService],
+    },
+    deps:[LoggerService, "APP_CONFIG"]
+  }, LoggerService, 
+  {
+    provide:"APP_CONFIG", useValue: {isDev: false}
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
