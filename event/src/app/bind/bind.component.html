@@ -1,0 +1,25 @@
+<p>
+  bind works!
+</p>
+<button disabled type="" (click)="doOnClick($event)">点我</button>
+<input value="Tom" (input)="doOnInput($event)">
+<table>
+  <tr>
+    <td [attr.colspan]="size">新闻网</td>
+  </tr>
+</table>
+<div class="a b" [class.c]="isBig">
+  新闻网
+</div>
+<div [ngClass]="divClass">
+  新闻网2
+</div>
+<div [style.color]="isDev?'red':'blue'">
+  新闻网3
+</div>
+<div [style.font-size.em]="isDev? 3 : 1">
+  新闻网4
+</div>
+<div [ngStyle]="divStyle">
+  新闻网5
+</div>
