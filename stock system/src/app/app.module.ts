@@ -17,12 +17,13 @@ import { StockFormComponent } from './stock/stock-form/stock-form.component';
 
 import { StockService } from './stock/stock.service';
 import { StockFilterPipe } from './stock/stock-filter.pipe';
+import { ReactiveRegistComponent } from './reactive-regist/reactive-regist.component';
 
 
 
 
 const routeConfig: Routes = [
-  { path: '', redirectTo: "/dashboard", pathMatch: "full" },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'stock', component: StockManageComponent },
   { path: 'stock/:id', component: StockFormComponent }
@@ -40,13 +41,14 @@ const routeConfig: Routes = [
     StarsComponent,
     DashboardComponent,
     StockFormComponent,
-    StockFilterPipe
+    StockFilterPipe,
+    ReactiveRegistComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    ReactiveFormsModule,                          //响应式编程
+    ReactiveFormsModule,                          //响应式表单编程
     RouterModule.forRoot(routeConfig)
   ],
   providers: [StockService],
