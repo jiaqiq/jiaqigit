@@ -1,0 +1,24 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+  <div>用户名：<input ngModel name="username" type="text"></div>
+  <div>手机号：<input ngModel name="mobile" type="number"></div>
+  <div ngModelGroup="passwordsGroup">
+    <div>密码：<input ngModel name="password" type="password"></div>
+    <div>确认密码：<input ngModel name="pconfirm" type="password"></div>
+  </div>
+  <button type="submit">注册</button>
+</form>
+<!--
+<div>
+  {{myForm.value | json}}
+</div>
+
+<div>
+  {{username.value}}
+</div>-->
+
+<!--特性：NgForm可以被一个模版本地变量引用，以便在模版中访问NgForm对象的的实例 如：#myForm="ngForm"-->
+<!--ngModel指令代表表单中的一个字段 这个指令会隐式的创建一个FormControl的实例来代表字段的数据模型
+并用这个FormControl类型的对象来存储字段的值  需要给添加了ngModel指令的元素指定一个nam属性
+这个name属性的值会成为ngForm对象的value属性所对应的对象中的一个属性 他也可以通过模版变量来引用-->
+
+

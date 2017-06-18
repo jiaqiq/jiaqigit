@@ -1,0 +1,21 @@
+<!--默认表单不能满足开发需求-->
+
+<!--<form action="/regist" method="post">
+  <div>用户名：<input type="text" required pattern="[a-zA-Z0-9]+"></div>
+  <div>手机号：<input type="text"></div>
+  <div>邮政编码：<input type="number" min="100000" max="999999"></div>
+  <div>密码：<input type="password"></div>
+  <div>确认密码：<input type="password"></div>
+  <button type="submit">注册</button>
+</form>-->
+
+<!--模版式表单  只能使用指令来定义数据模型-->
+
+<!--NgForm  NgModel NgModelGroup    都来自  FormsModel -->
+<!--NgForm 用来代表整个表单，他会自动的添加到每个form标签上，当启动服务后，angular会自动接管这个表单，明显的体现就是再次点击注册按钮不会再向action那里提交， 隐式的创建FormGroup类的实例，
+这个类用来代表表单的数据模型，并且存储表单的数据   NgForm可以在form标签之外使用，如：div上
+如果你不希望angular来自动处理你的表单，你需要在form标签上添加ngNoForm-->
+
+<!--<app-template-form></app-template-form>-->
+<!--<app-reactive-form></app-reactive-form>-->
+<app-reactive-regist></app-reactive-regist>
