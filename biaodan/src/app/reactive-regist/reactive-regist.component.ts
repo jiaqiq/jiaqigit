@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControlName, FormControl, FormGroup, FormArray, FormBuilder, AbstractControl, Validators } from '@angular/forms';
 import { mobileValidator, mobileAsyncValidator, equalValidator } from '../validator/validators';
+
 @Component({
   selector: 'app-reactive-regist',
   templateUrl: './reactive-regist.component.html',

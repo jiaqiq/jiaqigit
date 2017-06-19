@@ -1,9 +1,26 @@
-<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
-  <div>用户名：<input ngModel name="username" type="text"></div>
-  <div>手机号：<input ngModel name="mobile" type="number"></div>
-  <div ngModelGroup="passwordsGroup">
-    <div>密码：<input ngModel name="password" type="password"></div>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value, myForm.valid)" novalidate>
+  <div>用户名：<input ngModel required minlength="6" name="username" type="text" (input)="onMobileInput(myForm)"></div>
+  <div [hidden]="mobileValid || mobileUntouched">
+      <div [hidden]="!myForm.form.hasError('required', 'username')">
+          用户名是必填项
+      </div>
+      <div [hidden]="!myForm.form.hasError('minlength', 'username')">
+          用户名最小长度是6
+      </div>  
+  </div>
+  <div>手机号：<input ngModel mobile name="mobile" type="number"></div>
+  <div [hidden]="!myForm.form.hasError('mobile', 'mobile')">
+    请输入正确的手机号
+  </div>
+  <div ngModelGroup="passwordsGroup" equal>
+    <div>密码：<input ngModel minlength="6" name="password" type="password"></div>
+    <div [hidden]="!myForm.form.hasError('minlength', ['passwordsGroup', 'password'])">
+      密码最小长度是6
+    </div>
     <div>确认密码：<input ngModel name="pconfirm" type="password"></div>
+     <div [hidden]="!myForm.form.hasError('equal', 'passwordsGroup')">
+      {{myForm.form.getError('equal', 'passwordsGroup')?.desc}}
+    </div>
   </div>
   <button type="submit">注册</button>
 </form>
@@ -20,5 +37,7 @@
 <!--ngModel指令代表表单中的一个字段 这个指令会隐式的创建一个FormControl的实例来代表字段的数据模型
 并用这个FormControl类型的对象来存储字段的值  需要给添加了ngModel指令的元素指定一个nam属性
 这个name属性的值会成为ngForm对象的value属性所对应的对象中的一个属性 他也可以通过模版变量来引用-->
+
+<!--required,minlength是angular的指令  不是html默认的 为避免干扰加上novalidate不启用浏览器自带的-->
 
 

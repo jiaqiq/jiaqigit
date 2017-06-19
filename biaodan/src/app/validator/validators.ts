@@ -1,5 +1,5 @@
 import { FormControl, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/RX';
 
 //校验器
   // XXXXX(control: AbstractControl): {[key: string]: any} {
