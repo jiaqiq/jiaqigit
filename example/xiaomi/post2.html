@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div id="info" style="display:none;"></div>
+<fieldset id="login-box" style="display:none;">
+    <legend>登录</legend>
+    <form id="form" method="post" onsubmit="return false;">
+        <label>姓名：</label><input type="text" id="uname" name="name" /><br /><br />
+        <label>密码：</label><input type="text" id="upwd" name="pwd" /><br /><br />
+        <label style="color:red" id="error"></label><br />
+        <input type="submit" id="btn-submit" value="ajax提交" />
+    </form>
+</fieldset>
+<script src="ajax.js"></script>
+<script>
+function getCookie(key){
+    var result=document.cookie.match(new RegExp("(^| )"+key+"=([^;]*)(;|$)"));
+    return result!=null?unescape(decodeURI(result[2])):null
+}
+var userName = getCookie("uname");
+var infoNode = document.getElementById("info");
+var loginBoxNode = document.getElementById("login-box");
+var errorNode = document.getElementById("error");
+var time;
+var count=0;
+if(userName!=null){
+    infoNode.style.display="";
+    infoNode.innerHTML="欢迎您："+userName;
+}else{
+    loginBoxNode.style.display="";
+    // document.getElementById("form").onsubmit=function(){return false;}
+    document.getElementById("btn-submit").onclick=function(e){
+        errorNode.innerHTML = "";
+        var now = +new Date;
+        if(time&&(now-time<=2000)){
+            errorNode.innerHTML = "您的操作过于频繁";
+            return;
+        }
+        if(count>=5){
+            this.disabled = true;
+            var btnValue = this.value;
+            var second = 5;
+            var self = this;
+            this.value += "("+second+")s";
+            var interval = setInterval(function(){
+                self.value = btnValue + "("+(--second)+")s";
+                if(second==0){
+                    clearInterval(interval);
+                    self.value = btnValue;
+                }
+            },1000);
+            errorNode.innerHTML = "错误超过5次,10秒后再试";
+            setTimeout(function(){
+                self.disabled = false;
+                count=0;
+            },5*1000);
+            return;
+        }
+        time = now;
+        // e = e || window.event;
+        // if(e.preventDefault){
+        //     e.preventDefault();
+        // }else if(e.returnValue){
+        //     e.returnValue = false;
+        // }else{
+        //     return false;
+        // }
+        if(document.getElementById("uname").value==""||document.getElementById("upwd").value==""){
+            errorNode.innerHTML = "用户名和密码不能为空";
+        }else{            
+            ajax({
+                //发送请求的方式 post or get
+                method: "post",
+                //请求的接口的地址
+                url: "/api/login",
+                //编码
+                charset: "utf-8",
+                data:{
+                    name:document.getElementById("uname").value,
+                    pwd:document.getElementById("upwd").value
+                },
+                //是否异步
+                isAsync: true,
+                //回调函数
+                callback:function(data){
+                    errorNode.style.display="none";
+                    eval("var resultObj = "+ data);
+                    var result = resultObj.result;
+                    if(result.status==1){
+                        count=0;
+                        loginBoxNode.style.display="none";
+                        infoNode.style.display="";
+                        infoNode.innerHTML = "欢迎您："+result.text;
+                    }else{
+                        count++;
+                        errorNode.style.display="";
+                        errorNode.innerHTML = result.text;
+                    }
+                }  
+            })
+        }
+    };
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div id="info" style="display:none;"></div>
+<fieldset id="login-box" style="display:none;">
+    <legend>登录</legend>
+    <label>姓名：</label><input type="text" id="uname" name="name" /><br /><br />
+    <label>密码：</label><input type="text" id="upwd" name="pwd" /><br /><br />
+    <label style="color:red" id="error"></label><br />
+    <button id="btn-submit">ajax提交</button>
+</fieldset>
+<script src="ajax.js"></script>
+<script>
+function getCookie(key){
+    var result=document.cookie.match(new RegExp("(^| )"+key+"=([^;]*)(;|$)"));
+    return result!=null?unescape(decodeURI(result[2])):null
+}
+var userName = getCookie("uname");
+var infoNode = document.getElementById("info");
+var loginBoxNode = document.getElementById("login-box");
+var errorNode = document.getElementById("error");
+if(userName!=null){
+    infoNode.style.display="";
+    infoNode.innerHTML="欢迎您："+userName;
+}else{
+    loginBoxNode.style.display="";
+    document.getElementById("btn-submit").onclick=function(){
+        ajax({
+            //发送请求的方式 post or get
+            method: "post",
+            //请求的接口的地址
+            url: "/api/login",
+            //编码
+            charset: "utf-8",
+            data:{
+                name:document.getElementById("uname").value,
+                pwd:document.getElementById("upwd").value
+            },
+            //是否异步
+            async: true,
+            //回调函数
+            callback:function(data){
+                errorNode.style.display="none";
+                eval("var resultObj = "+ data);
+                var result = resultObj.result;
+                if(result.status==1){
+                    loginBoxNode.style.display="none";
+                    infoNode.style.display="";
+                    infoNode.innerHTML = "欢迎您："+result.text;
+                }else{
+                    errorNode.style.display="";
+                    errorNode.innerHTML = result.text;
+                }
+            }  
+        })
+    };
+}
+</script>
+</body>
+</html>

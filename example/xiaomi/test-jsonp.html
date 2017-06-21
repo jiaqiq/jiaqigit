@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test jsonp</title>
+</head>
+<body>
+<input type="text" id="search-box" />
+<div id="container"></div>
+<script src="jsonp.js"></script>
+<script>
+var containerNode = document.getElementById("container");
+var inputBox = document.getElementById("search-box");
+function getData(key){
+    //调用方法
+    jsonp({
+        url:"http://search.mi.com/search/expand",
+        callback:"jsonpcallback",   //跟后台协商的接收回调名
+        data:{keyword:key},
+        success:function(json){
+            var str = [];
+            for(var i=0;i<json.length;i++){
+                var item = json[i];
+                str.push("<dl>");
+                str.push("<dt>"+ item.Key +"</dt>");
+                str.push("<dd>"+ item.Rst +"</dd>");
+                str.push("</dl>");
+            }
+            containerNode.innerHTML = str.join("");
+        },
+        fail:function(){
+            console.log("error")
+        },
+        time:10000
+    });
+}
+inputBox.onkeyup = function(){
+    getData(this.value);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>xiaomi</title>
+    <link rel="stylesheet" type="text/css" href="css/xiaomi-style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/popup-style.css">
+     <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+</head>
+<body>
+<!--注册-->
+<div class="denglu" id="zc-page">
+    <div class="close" id="zcclose"></div>
+    <div class="dl-header">
+        <em class="logo2">
+            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect width="50" height="50" style="fill:#ef5b00"></rect>
+                <rect x="11.25" y="15" width="5" height="20" style="fill:#FFFFFF"></rect>
+                <rect x="11.25" y="15" width="12.5" height="5" style="fill:#FFFFFF"></rect>
+                <rect x="26.25" y="22.5" width="5" height="12.5" style="fill:#FFFFFF"></rect>
+                <rect x="33.75" y="15" width="5" height="20" style="fill:#FFFFFF"></rect>
+                <circle cx="23.75" cy="22.5" r="7.5" fill="#FFFFFF"></circle>
+                <rect x="16.25" y="20" width="7.5" height="15" style="fill:#ef5b00"></rect>
+                <rect x="16.25" y="22.5" width="10" height="12.5" style="fill:#ef5b00"></rect>
+                <circle cx="23.75" cy="22.5" r="2.5" fill="#ef5b00"></circle>
+                <rect x="18.75" y="22.5" width="5" height="12.5" style="fill:#FFFFFF"></rect>
+            </svg>
+        </em>
+        <h4 class="header-text">小米账号注册</h4>
+        <div class=" site_info"></div>
+    </div>
+    <div class="login_area">
+        <form id="zc-main-form" onsubmit="return false;">
+            <div class="loginbox c_b">
+            <!-- 输入框 -->
+                <div class="lgn_inputbg c_b">
+              <!--验证用户名-->
+                    <label id="region-code" class="labelbox login_user c_b" for="">
+                        <input class="item_account" autocomplete="off" type="text" name="zcname" id="zcuname" placeholder="中国（+86）">
+                    </label>
+                    <label id="zcuname-error" class="error" for="zcuname" style="display:none;font-size:14px;color: red">最少要输入 11 个字符</label>
+                    <label class="labelbox pwd_panel c_b">
+                        <input type="password" placeholder="请输入密码" name="zcpwd" id="zcpwd">
+                    </label>
+                    <label id="zcpwd-error" class="error" for="zcpwd" style="display:none;font-size:14px;color: red">必填！</label>
+                    <label class="labelbox pwd_panel c_b">
+                        <input type="password" placeholder="请再次输入密码" name="repzcpwd" id="repzcpwd">
+                    </label>
+                    <label id="repzcpwd-error" class="error" for="repzcpwd" style="display:none;font-size:14px;color: red">必填！</label>
+                </div>
+                <div class="lgncode c_b" id="zccaptcha"></div>
+                <!-- 错误信息 -->
+                <div class="err_tip" id="zcerror-outcon">
+                    <div class="zcdis_box"><em class="icon_error"></em><span class="error-con">用户名不正确</span></div>
+                </div>
+                <!-- 登录频繁 -->
+                <div id="zcerror-forbidden" class="err_forbidden"></div>
+                <div class="btns_bg">
+                  <input class="btnadpt btn_orange" id="zclogin-button" type="submit" value="立即注册">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- 登陆 -->
+<div class="wrapper2-container" id="wrapper22" style="display:none;">
+  <div class="wrapper2">
+      <div class="wrap">
+        <div class="layout" id="layout">
+          <!--表单输入登录-->
+          <div class="mainbox" id="login-main">
+            <div><a class="ercode" id="qrcode-trigger" href="javascript:void(0)"></a></div> 
+            <!-- header s -->
+            <div class="lgnheader">
+              <div class="header_tit t_c">
+                <em id="custom_display_1" class="milogo">
+                  <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50" style="fill:#ef5b00"></rect><rect x="11.25" y="15" width="5" height="20" style="fill:#FFFFFF"></rect><rect x="11.25" y="15" width="12.5" height="5" style="fill:#FFFFFF"></rect><rect x="26.25" y="22.5" width="5" height="12.5" style="fill:#FFFFFF"></rect><rect x="33.75" y="15" width="5" height="20" style="fill:#FFFFFF"></rect><circle cx="23.75" cy="22.5" r="7.5" fill="#FFFFFF"></circle><rect x="16.25" y="20" width="7.5" height="15" style="fill:#ef5b00"></rect><rect x="16.25" y="22.5" width="10" height="12.5" style="fill:#ef5b00"></rect><circle cx="23.75" cy="22.5" r="2.5" fill="#ef5b00"></circle><rect x="18.75" y="22.5" width="5" height="12.5" style="fill:#FFFFFF"></rect></svg>
+                </em>
+                <h4 class="header_tit_txt" id="login-title">小米帐号登录</h4>
+              <div class=" site_info"></div></div>
+            </div>
+            <!-- header e -->
+            <div>
+              <div class="login_area">
+                <form action="" id="login-main-form" name="f1" onsubmit="return false">
+                  <div class="loginbox c_b">
+                    <!-- 输入框 -->
+                    <div class="lgn_inputbg c_b">
+                      <!--验证用户名-->
+                      <div class="single_imgarea" id="account-info">
+                        <div class="na-img-area" id="account-avator" style="display:none">
+                          <div class="na-img-bg-area" id="account-avator-con"></div>
+                        </div>
+                        <p class="us_name" id="account-displayname"></p>
+                        <p class="us_id"></p>
+                      </div>
+                      <label id="region-code" class="labelbox login_user c_b" for="">
+                        <div class="turn_area"><a class="btn_turn" id="manual_code" href="javascript:void(0);" title="关闭国家码"></a></div>
+                        <div class="country_list">
+                          <div class="animation countrycode_selector" id="countrycode_selector">
+                            <span class="country_code"><tt class="countrycode-value" id="countrycode_value"></tt><i class="icon_arrow_down"></i></span>
+                          </div>
+                        </div>
+                        <!-- 用户名 -->
+                        <input class="item_account" autocomplete="off" type="text" name="name" id="username" placeholder="邮箱/手机号码/小米帐号">
+                      </label>
+                      <div class="country-container" id="countrycode_container" style="display: none;"></div>
+                      <label class="labelbox pwd_panel c_b">
+                        <div class="eye_panel pwd-visiable">
+                          <i class="eye pwd-eye">
+                          <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <path class="eye_outer" d="M0 8 C6 0,14 0,20 8, 14 16,6 16, 0 8 z"></path>
+                            <circle class="eye_inner" cx="10" cy="8" r="3"></circle>
+                          </svg>
+                          </i>
+                        </div>
+                        <!-- 密码 -->
+                        <input type="password" placeholder="密码" name="pwd" id="pwd">
+                        <input type="text" placeholder="密码" id="visiablePwd" style="display:none">
+                      </label>
+                    </div>
+                    <div class="lgncode c_b" id="captcha">
+                    </div>
+                    <!-- 错误信息 -->
+                    <div class="err_tip" id="error-outcon">
+                        <div class="dis_box">
+                        <em class="icon_error"></em><span id="err1" class="error-con"></span>
+                        </div>
+                    </div>
+                    <!-- 登录频繁 -->
+                    <div id="error-forbidden" class="err_forbidden">您的操作频率过快，请10秒过后重试!&nbsp;&nbsp;&nbsp;<span id="showtime"></span></div>
+                    <!-- 登陆 -->
+                    <div class="btns_bg">
+                      <input class="btnadpt btn_orange" id="login-button" type="submit" value="立即登录">
+                      <span id="custom_display_8" class="sns-default-container sns_default_container" style="display: none;">
+                      </span>
+                    </div>
+                    <!-- 其他登录方式 s -->
+                    <div style="display: block;" class="other_login_type sns-login-container" id="custom_display_16">
+                      <fieldset class="oth_type_tit">
+                        <legend align="center" class="oth_type_txt">其他方式登录</legend>
+                      </fieldset>
+                      <div class="oth_type_links">
+                        <a class="icon_type btn_qq sns-login-link" data-type="qq" href="https://account.xiaomi.com/pass/sns/login/auth?appid=100284651&amp;&amp;callback=http%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttp%253A%252F%252Fwww.mi.com%252F%26sign%3DNWU4MzRmNjBhZmU4MDRmNmZkYzVjMTZhMGVlMGFmMTllMGY0ZTNhZQ%2C%2C&amp;sid=mi_eshop" title="QQ登录" target="_blank"><i class="btn_sns_icontype icon_default_qq"></i></a>
+                        <a class="icon_type btn_weibo sns-login-link" data-type="weibo" href="https://account.xiaomi.com/pass/sns/login/auth?appid=2996826273&amp;&amp;callback=http%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttp%253A%252F%252Fwww.mi.com%252F%26sign%3DNWU4MzRmNjBhZmU4MDRmNmZkYzVjMTZhMGVlMGFmMTllMGY0ZTNhZQ%2C%2C&amp;sid=mi_eshop" title="微博登录" target="_blank"><i class="btn_sns_icontype icon_default_weibo"></i></a>
+                        <a class="icon_type btn_alipay sns-login-link" data-type="alipay" href="https://account.xiaomi.com/pass/sns/login/auth?appid=2088011127562160&amp;&amp;callback=http%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttp%253A%252F%252Fwww.mi.com%252F%26sign%3DNWU4MzRmNjBhZmU4MDRmNmZkYzVjMTZhMGVlMGFmMTllMGY0ZTNhZQ%2C%2C&amp;sid=mi_eshop" title="支付宝登录" target="_blank"><i class="btn_sns_icontype icon_default_alipay"></i></a>
+                        <a class="icon_type btn_weixin sns-login-link" data-type="weixin" href="javascript:void(0)" title="微信登录" style="display: none;"><i class="btn_sns_icontype icon_default_weixin"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- 其他登录方式 e -->
+            <div class="n_links_area" id="custom_display_64">
+              <a class="outer-link" href="javascript:void(0)" onclick="skip()">注册小米帐号</a><span>|</span>
+              <a class="outer-link" href="https://account.xiaomi.com/pass/forgetPassword?callback=http%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttp%253A%252F%252Fwww.mi.com%252F%26sign%3DNWU4MzRmNjBhZmU4MDRmNmZkYzVjMTZhMGVlMGFmMTllMGY0ZTNhZQ%2C%2C&amp;sid=mi_eshop">忘记密码？</a>
+
+            </div>
+          </div>
+
+          <div class="ercode_area" id="login-qrcode">
+            <div class="ercode_pannel">
+              <a class="code_close" href="javascript:void(0)" title="关闭" id="qrcode-close"><span class="icon_code_close"></span></a>
+              <div class="ercode_box">
+                <div class="code_hd">
+                  <h3 class="code_tit">小米帐号扫码登录</h3>
+                  <p>请使用最新版MIUI中“我的小米”进行扫码登录</p>
+                </div>
+                <div class="code_iframe">
+                  <iframe style="background:#fff;" src="about:blank" id="qriframe" frameborder="0" scrolling="no"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- ******************************************************************* -->
+    <div class="shortcut clearfix box">
+        <div class="nav wrapper">
+            <div class="nav-left">
+                <ul>
+                    <li class="mi"><a href="">小米网</a></li>
+                    <li><a href="">MIUI</a></li>
+                    <li><a href="">米聊</a></li>
+                    <li><a href="">游戏</a></li>
+                    <li><a href="">多看阅读</a></li>
+                    <li><a href="">云服务</a></li>
+                    <li><a href="">小米网移动版</a></li>
+                    <li><a href="">问题反馈</a></li>
+                    <li class="sel"><a href="">SelectRegion</a></li>
+                </ul>
+            </div>
+            <div class="nav-right clearfix">
+                <div class="shopping clearfix" id="mini-shopping">
+                    <span class="sho" id="shopping-sp">购物车(0)</span>
+                    <div id="mini-menu" class="mini-shop">
+                        <p id="mini-sp" style="display:none">购物车中还是空的，赶紧选购商品吧!</p>
+                    </div>
+                </div>
+                <div class="sp">
+                    <a class="login aa" href="javascript:void(0)" id="login-popup">登录</a>
+                    <!-- <ul class="user-meun">
+                      <li><a href="">个人中心</a></li>
+                      <li><a href="">评价晒单</a></li>
+                      <li><a href="">我的喜欢</a></li>
+                      <li><a href="">小米账户</a></li>
+                      <li><a href="">退出登录</a></li>
+                    </ul> -->
+                    <a href="javascript:void:(0)" id="exit" class="aa" style="display:none">退出a
+                    <span class="shu">|</span>
+                    <a href="javascript:void(0)" id="register">注册</a>
+                </div>
+            </div> 
+        </div>   
+    </div>
+    <div class="wrapper">
+        <div class="main-nav clearfix">
+            <div class="logo">
+                <img src="images/logo.png">
+                <i></i>
+            </div>
+            <div class="top-nav">
+                <ul id="nav-list">
+                    <li><a href="">小米手机</a></li>
+                    <li><a href="">红米</a></li>
+                    <li><a href="">平板</a></li>
+                    <li><a href="">电视</a></li>
+                    <li><a href="">盒子</a></li>
+                    <li><a href="">路由器</a></li>
+                    <li><a href="">智能硬件</a></li>
+                    <li><a href="">服务</a></li>
+                    <li><a href="">社区</a></li>
+                </ul>
+            </div>
+            <div id="menus-content" class="menus-change" style="display:none;">
+                <div>
+                    <ul class=" phone clearfix">
+                        <li>
+                            <a href=""><img src="images/mi-phone1.jpg"/ class="mi"></a> 
+                        </li>
+                        <li>
+                           <a href=""><img src="images/mi-phone2.jpg"/> </a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/mi-phone3.jpg"/></a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class=" phone clearfix">
+                        <li>
+                            <a href=""><img src="images/hongmi-phone1.jpg" class="mi" /></a> 
+                        </li>
+                        <li>
+                           <a href=""><img src="images/hongmi-phone2.jpg"/></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/hongmi-phone3.jpg"/></a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class=" phone clearfix">
+                        <li>
+                            <a href=""><img src="images/pad1.jpg" class="mi" /></a> 
+                        </li>
+                        <li>
+                           <a href=""><img src="images/pad2.jpg"/> </a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/pad3.jpg"/></a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class=" phone clearfix">
+                        <li>
+                            <a href=""><img src="images/tv1.jpg" class="mi"/></a> 
+                        </li>
+                        <li>
+                           <a href=""><img src="images/tv2.jpg"/> </a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/tv3.jpg"/></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/tv4.jpg"/></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/tv5.jpg"/></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/tv6.jpg"/></a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class=" phone clearfix">
+                        <li>
+                            <a href=""><img src="images/hezi1.jpg" class="mi"/></a> 
+                        </li>
+                        <li>
+                           <a href=""><img src="images/hezi2.jpg"/> </a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/hezi3.jpg"/></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/hezi4.jpg"/></a>
+                        </li>
+                         <li>
+                            <a href=""><img src="images/hezi5.jpg"/></a>
+                        </li>
+                         <li>
+                            <a href=""><img src="images/hezi6.jpg"/></a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                   <ul class=" phone clearfix">
+                        <li>
+                            <a href=""><img src="images/wifi1.jpg" class="mi" /></a> 
+                        </li>
+                        <li>
+                           <a href=""><img src="images/wifi2.jpg"/> </a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/wifi3.jpg"/></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/wifi4.jpg"/></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/wifi5.jpg"/></a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class=" phone clearfix">
+                        <li>
+                            <a href=""><img src="images/zhineng1.jpg" class="mi" /></a> 
+                        </li>
+                        <li>
+                           <a href=""><img src="images/zhineng2.jpg"/> </a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/zhineng3.jpg"/></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/zhineng4.jpg"/></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/zhineng5.jpg"/></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/zhineng6.jpg"/></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search clearfix" id="search-right">
+                <input type="text" class="input1" id="shuru" autocomplete="off">
+                <input type="submit" value="" class="search-btn" id="submit-btn"/>
+                <ul class="shuru-down" id="shuru-down2" style="display:none;">
+                    <li>
+                        <a href="javascript:void(0);" class="clearfix">
+                        <span class="sp1">小米手机5</span><span class="sp2">约有11件</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="clearfix">
+                        <span class="sp1">空气净化器2</span><span class="sp2">约有1件</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="clearfix">
+                        <span class="sp1">活塞耳机</span><span class="sp2">约有4件</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="clearfix">
+                        <span class="sp1">小米路由器</span><span class="sp2">约有8件</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="clearfix">
+                        <span class="sp1">移动电源</span><span class="sp2">约有21件</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="clearfix">
+                        <span class="sp1">运动相机</span><span class="sp2">约有3件</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="clearfix">
+                        <span class="sp1">小蚁摄像机</span><span class="sp2">约有2件</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="clearfix">
+                        <span class="sp1">小米体重秤</span><span class="sp2">约有1件</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="clearfix">
+                        <span class="sp1">小米插线板</span><span class="sp2">约有13件</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="clearfix">
+                        <span class="sp1">配件优惠套装</span><span class="sp2">约有32件</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hot-words" id="shuru-hot">
+                    <a href="javascript:void(0);" >平衡车</a>
+                    <a href="javascript:void(0);" >小米手机4</a>
+                </div>
+            </div>
+        </div>
+        <!-- banner图模块 -->
+        <div class="banner clearfix" id="banner-container">
+             <ul class="imgs">
+                <li class="img img1"></li>
+                <li class="img img2"></li>
+                <li class="img img3"></li>
+                <li class="img img4"></li>
+                <li class="img img5"></li>
+                <li class="img img6"></li>
+                <li class="img img8"></li>
+                <li class="img img9"></li>
+            </ul>
+            <div class="banner-left clearfix">
+                <ul class="banner-list clearfix" id="left-list">
+                    <li><a href="">手机 平板 电话卡<i></i></a></li>
+                    <li><a href="">电视  盒子<i></i></a></li>
+                    <li><a href="">路由器 智能硬件<i></i></a></li>
+                    <li><a href="">移动电源 插线板<i></i></a></li>
+                    <li><a href="">耳机 音箱<i></i></a></li>
+                    <li><a href="">电池 存储卡<i></i></a></li>
+                    <li><a href="">保护套 后盖<i></i></a></li>
+                    <li><a href="">贴膜 其他配件<i></i></a></li>
+                    <li><a href="">米兔 服装<i></i></a></li>
+                    <li><a href="">箱包 其他周边<i></i></a></li>
+                </ul>
+                <div class="tabbox clearfix" id="tab">
+                    <div class="tab-change" style="display:none">
+                        <ul class="choose clearfix">
+                            <li>
+                                <a href="" class="mini-link">
+                                    <img src="images/mini-shouji1.jpg"/>
+                                    <span class="text">小米手机5</span>
+                                </a>
+                                <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji2.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji3.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji4.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji5.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji6.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                        </ul>
+                        <ul class="choose clearfix">
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji7.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji9.jpg"/>
+                                   <span class="text">小米手机6</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-change" style="display:none">
+                        <ul class="choose clearfix">
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-change" style="display:none">
+                        <ul class="choose clearfix">
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-change" style="display:none">
+                        <ul class="choose clearfix">
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-change" style="display:none">
+                        <ul class="choose clearfix">
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-change" style="display:none">
+                       <ul class="choose clearfix">
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-change" style="display:none">
+                        <ul class="choose clearfix">
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                              <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-change" style="display:none">
+                        <ul class="choose clearfix">
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                              <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-change" style="display:none">
+                         <ul class="choose clearfix">
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-change" style="display:none">
+                         <ul class="choose clearfix">
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a>  
+                            </li>
+                            <li>
+                              <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                               <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                            <li>
+                                <a href="" class="mini-link">
+                                   <img src="images/mini-shouji8.jpg"/>
+                                   <span class="text">小米手机5</span>
+                               </a>
+                               <a href="" class="mini-btn">选购</a> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-right">
+                <div class="banner-l-r">
+                    <a href="javascript:void(0);" class="btn btn-pre" id="button-pre"></a>
+                    <a href="javascript:void(0);" class="btn btn-next" id="button-next"></a>
+                </div>
+                <div class="page-list" id="page-container">
+                    <i class="cur"></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+            </div>
+        </div>
+        <div class="activity clearfix">
+            <div class="activity-left">
+                <ul>
+                    <li>
+                         <a href="javascript:void(0)" class="a1">电信专场</a>
+                    </li>
+                    <li>
+                        <a href="" class="a2">企业团购</a>
+                    </li>
+                    <li class="li-3">
+                        <a href="" class="a3">官翻产品</a>
+                    </li>
+                    <li>
+                       <a href="" class="a4">小米移动</a>
+                    </li>
+                    <li>
+                        <a href="" class="a5">以旧换新</a>
+                    </li>
+                    <li class="li-6">
+                        <a href="" class="a6">话费充值</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="activity-right">
+                <ul>
+                    <li><img src="images/xiaomimax.jpg" id="activity1" /></li>
+                    <li><img src="images/xiaomifenqigou.jpg" id="activity2"/></li>
+                    <li><img src="images/hongmibiaozhunban.jpg" id="activity3"/></li>
+                </ul>
+            </div>
+        </div>
+        <div class="star clearfix box">
+            <h3>小米明星单品</h3>
+            <div class="arrow-l-r clearfix">
+                <i class="icon-starleft" id="btn-left"></i>
+                <i class="icon-starright" id="btn-right"></i>
+            </div>
+            <div class="move">
+                <div id="move-box" class="move-box">
+                    <ul class="rainbow clearfix">
+                        <li class="rainbow-1">
+                            <img src="images/xiaominote.jpg"/><br/>
+                            <a href="">小米NOTE</a>
+                            <p>大屏旗舰，HiFi 双卡双待</p>
+                            <p class="price">699元</p>
+                        </li>
+                        <li class="rainbow-2">
+                            <img src="images/xiaomi4c.jpg"/><br/>
+                            <a href="">小米手机4c</a>
+                            <p>快、轻薄、美，青春五色可选</p>
+                            <p class="price">1099元</p>
+                        </li>
+                        <li class="rainbow-3">
+                            <img src="images/xiaomihezi.jpg"/><br/>
+                            <a href="">小米盒子3 增强版</a>
+                            <p>高端 4K 网络机顶盒</p>
+                            <p class="price">399元</p>
+                        </li>
+                        <li class="rainbow-4">
+                            <img src="images/yidongpower.jpg"/><br/>
+                            <a href="">移动电源10000mAh 高配版</a>
+                            <p>支持USB Type-C充放电，双向快充</p>
+                            <p class="price">149元</p>
+                        </li>
+                         <li class="rainbow-5">
+                            <img src="images/xiaominote5.jpg"/><br/>
+                            <a href="">小米NOTE</a>
+                            <p>大屏旗舰，HiFi 双卡双待</p>
+                            <p class="price">699元</p>
+                        </li>
+                        <li class="rainbow-1">
+                            <img src="images/xiaomi4c6.jpg"/><br/>
+                            <a href="">小米手机4c</a>
+                            <p>快、轻薄、美，青春五色可选</p>
+                            <p class="price">1099元</p>
+                        </li>
+                        <li class="rainbow-2">
+                            <img src="images/xiaomihezi7.jpg"/><br/>
+                            <a href="">小米盒子3 增强版</a>
+                            <p>高端 4K 网络机顶盒</p>
+                            <p class="price">399元</p>
+                        </li>
+                        <li class="rainbow-3">
+                            <img src="images/yidongpower8.jpg"/><br/>
+                            <a href="">移动电源10000mAh 高配版</a>
+                            <p>支持USB Type-C充放电，双向快充</p>
+                            <p class="price">149元</p>
+                        </li>
+                        <li class="rainbow-4">
+                            <img src="images/yidongpower8.jpg"/><br/>
+                            <a href="">移动电源10000mAh 高配版</a>
+                            <p>支持USB Type-C充放电，双向快充</p>
+                            <p class="price">149元</p>
+                        </li>
+                        <li class="rainbow-5">
+                            <img src="images/yidongpower8.jpg"/><br/>
+                            <a href="">移动电源10000mAh 高配版</a>
+                            <p>支持USB Type-C充放电，双向快充</p>
+                            <p class="price">149元</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="smart-bg">
+    <div id="main-container">
+        <div class="wrapper smart clearfix box">
+            <div class="nav-smart">
+              <h3>智能硬件</h3>
+              <a href="http://www.mi.com/smart/" class="look fl-right" id="look-all">查看全部</a>
+            </div>
+            <div class="brick">
+              <a href="" class="phone-watch"><img src="images/watch-phone.jpg"/></a>
+                <ul class="brick-list clearfix" id="brick-box">
+                    <li>
+                        <img src="images/tizhongcheng.jpg"/><br/>
+                        <a href="#">小米体重秤</a>
+                        <p>高精度压力传感器，手机管理全家健康</p>
+                        <p class="price">99元</p>
+                        <!-- <div style="width:220px;height:80px;background:#ff6700;position:absolute;bottom:0;left:0">测试弹出内容</div> -->
+                    </li>
+                    <li>
+                        <div class="new">
+                            <span>新品</span>
+                        </div>
+                        <img src="images/luyouqi.jpg"/><br/>
+                        <a href="#">小米路由器3</a>
+                        <p>更安全更稳定，现货发售</p>
+                        <p class="price">149元</p>
+                    </li>
+                    <li>
+                        <img src="images/xiaomishouhuan.jpg"/><br/>
+                        <a href="#">小米手环 光感版</a>
+                        <p>实时监测心率，科学运动</p>
+                        <p class="price">99元</p>
+                    </li>
+                    <li>
+                        <img src="images/zhaoxiangji.jpg"/><br/>
+                        <a href="#">小蚁运动相机</a>
+                        <p>边玩边录边拍，手机随时分享</p>
+                        <p class="price">399元</p>
+                    </li>
+                    <li class="mgtop">
+                        <img src="images/xueyaji.jpg"/><br/>
+                        <a href="#">iHealth智能血压计（蓝牙版）</a>
+                        <p>送给父母的健康礼物</p>
+                        <p class="price">199元</p>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/shexiangji.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/shexiangji.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/shexiangji.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+         <div class="wrapper smart clearfix">
+            <div class="nav-smart clearfix box">
+              <h3>搭配</h3>
+              <ul class="tab-list" id="tablist-change">
+                <li class="selected">热门</li>
+                <li>耳机音响</li>
+                <li>电源</li>
+                <li>电池存储卡</li>
+              </ul>
+            </div>
+            <div class="brick clearfix">
+              <div class="tab-left">
+                  <a href="" class="move-power"><img src="images/movepower.jpg"/></a>
+                  <a href="" class="earphone"><img src="images/earphone.jpg"/></a>
+              </div>
+              <div id="content-list">
+                <ul class=" dapei brick-list  clearfix" id="square-box">
+                    <li>
+                        <img src="images/tizhongcheng.jpg"/><br/>
+                        <a href="#">小米体重秤</a>
+                        <p>高精度压力传感器，手机管理全家健康</p>
+                        <p class="price">99元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="new">
+                            <span>新品</span>
+                        </div>
+                        <img src="images/luyouqi.jpg"/><br/>
+                        <a href="#">小米路由器3</a>
+                        <p>更安全更稳定，现货发售</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/xiaomishouhuan.jpg"/><br/>
+                        <a href="#">小米手环 光感版</a>
+                        <p>实时监测心率，科学运动</p>
+                        <p class="price">99元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/zhaoxiangji.jpg"/><br/>
+                        <a href="#">小蚁运动相机</a>
+                        <p>边玩边录边拍，手机随时分享</p>
+                        <p class="price">399元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <img src="images/xueyaji.jpg"/><br/>
+                        <a href="#">iHealth智能血压计（蓝牙版）</a>
+                        <p>送给父母的健康礼物</p>
+                        <p class="price">199元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/shexiangji.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/shexiangji.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/shexiangji.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class=" dapei brick-list clearfix" id="square-box2" style="display:none">
+                    <li>
+                        <img src="images/tizhongcheng2.jpg"/><br/>
+                        <a href="#">小米体重秤</a>
+                        <p>高精度压力传感器，手机管理全家健康</p>
+                        <p class="price">99元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="new">
+                            <span>新品</span>
+                        </div>
+                        <img src="images/luyouqi2.jpg"/><br/>
+                        <a href="#">小米路由器3</a>
+                        <p>更安全更稳定，现货发售</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/xiaomishouhuan2.jpg"/><br/>
+                        <a href="#">小米手环 光感版</a>
+                        <p>实时监测心率，科学运动</p>
+                        <p class="price">99元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/zhaoxiangji2.jpg"/><br/>
+                        <a href="#">小蚁运动相机</a>
+                        <p>边玩边录边拍，手机随时分享</p>
+                        <p class="price">399元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <img src="images/xueyaji2.jpg"/><br/>
+                        <a href="#">iHealth智能血压计（蓝牙版）</a>
+                        <p>送给父母的健康礼物</p>
+                        <p class="price">199元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/shexiangji2.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/shexiangji3.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/shexiangji4.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                </ul>
+                 <ul class=" dapei brick-list clearfix" id="square-box3" style="display:none">
+                    <li>
+                        <img src="images/power1.jpg"/><br/>
+                        <a href="#">小米体重秤</a>
+                        <p>高精度压力传感器，手机管理全家健康</p>
+                        <p class="price">99元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="new">
+                            <span>新品</span>
+                        </div>
+                        <img src="images/power2.jpg"/><br/>
+                        <a href="#">小米路由器3</a>
+                        <p>更安全更稳定，现货发售</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/power3.jpg"/><br/>
+                        <a href="#">小米手环 光感版</a>
+                        <p>实时监测心率，科学运动</p>
+                        <p class="price">99元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/power4.jpg"/><br/>
+                        <a href="#">小蚁运动相机</a>
+                        <p>边玩边录边拍，手机随时分享</p>
+                        <p class="price">399元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <img src="images/power5.jpg"/><br/>
+                        <a href="#">iHealth智能血压计（蓝牙版）</a>
+                        <p>送给父母的健康礼物</p>
+                        <p class="price">199元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/power6.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/power7.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/power7.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class=" dapei brick-list clearfix" id="square-box4" style="display:none">
+                    <li>
+                        <img src="images/battery1.jpg"/><br/>
+                        <a href="#">小米体重秤</a>
+                        <p>高精度压力传感器，手机管理全家健康</p>
+                        <p class="price">99元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="new">
+                            <span>新品</span>
+                        </div>
+                        <img src="images/battery2.jpg"/><br/>
+                        <a href="#">小米路由器3</a>
+                        <p>更安全更稳定，现货发售</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/battery3.jpg"/><br/>
+                        <a href="#">小米手环 光感版</a>
+                        <p>实时监测心率，科学运动</p>
+                        <p class="price">99元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/battery4.jpg"/><br/>
+                        <a href="#">小蚁运动相机</a>
+                        <p>边玩边录边拍，手机随时分享</p>
+                        <p class="price">399元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <img src="images/battery5.jpg"/><br/>
+                        <a href="#">iHealth智能血压计（蓝牙版）</a>
+                        <p>送给父母的健康礼物</p>
+                        <p class="price">199元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/battery6.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/battery7.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                    <li class="mgtop">
+                        <div class="free">
+                            <span>免费邮</span>
+                        </div>
+                        <img src="images/battery7.jpg"/><br/>
+                        <a href="#">小蚁智能摄像机 夜视版</a>
+                        <p>能看能听能说，手机远程观看</p>
+                        <p class="price">149元</p>
+                        <div id="mini-up1" class="mini-up">
+                          <p>弹出的内容
+                        弹出的内容</p>
+                        </div>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-bg">
+                <ul class="foot-server wrapper clearfix">
+                    <li class="server1"><a href=""><i class="icon icon1"></i>1小时快修服务</a></li>
+                    <li><a href=""><i class="icon icon2"></i>7天无理由退货</a></li>
+                    <li><a href=""><i class="icon icon3"></i>15天免费换货</a></li>
+                    <li><a href=""><i class="icon icon4"></i>满150元包邮</a></li>
+                    <li><a href=""><i class="icon icon5"></i>520余家售后网点</a></li>
+                </ul>
+                <div class="foot-cent  wrapper clearfix">
+                   <div class="foot-left clearfix">
+                        <dl class="foot-link">
+                            <dt>帮助中心</dt>
+                            <dd><a href="">账户管理</a></dd>
+                            <dd><a href="">购物指南</a></dd>
+                            <dd><a href="">订单操作</a></dd>
+                        </dl>
+                        <dl class="foot-link">
+                            <dt>服务支持</dt>
+                            <dd><a href="">售后政策</a></dd>
+                            <dd><a href="">自助服务</a></dd>
+                            <dd><a href="">相关下载</a></dd>
+                        </dl>
+                        <dl class="foot-link">
+                            <dt>线下门店</dt>
+                            <dd><a href="">小米之家</a></dd>
+                            <dd><a href="">服务网点</a></dd>
+                            <dd><a href="">零售网点</a></dd>
+                        </dl>
+                        <dl class="foot-link">
+                            <dt>关于小米</dt>
+                            <dd><a href="">了解小米</a></dd>
+                            <dd><a href="">加入小米</a></dd>
+                            <dd><a href="">联系我们</a></dd>
+                        </dl>
+                        <dl class="foot-link">
+                            <dt>关注我们</dt>
+                            <dd><a href="">新浪微博</a></dd>
+                            <dd><a href="">小米部落</a></dd>
+                            <dd><a href="">官方微信</a></dd>
+                        </dl>
+                        <dl class="foot-link">
+                            <dt>特色服务</dt>
+                            <dd><a href="">F 码通道</a></dd>
+                            <dd><a href="">小米移动</a></dd>
+                            <dd><a href="">防伪查询</a></dd>
+                        </dl>
+                    </div>
+                    <div class="foot-right">
+                        <p class="phone">400-100-5678</p>
+                       <p class="time"><span class="phone-time">周一至周日 8:00-18:00</span><span class="" style="display:none;">2月7日至13日服务时间 9:00-18:00</span><br>（仅收市话费）
+                       </p>
+                      <a class="kefu"><i class="iconfont"></i> 24小时在线客服</a>            
+                    </div> 
+                </div>
+            </div>
+        </div>
+            <div class="footer-bott">
+                <div class="foot-container clearfix">
+                    <div class="foot-logo"></div>
+                    <div class="info-text">
+                        <p class="sites"><a>小米网</a><span class="sep">|</span><a>MIUI</a><span class="sep">|</span><a>米聊</a><span class="sep">|</span><a>多看书城</a><span class="sep">|</span><a>小米路由器</a><span class="sep">|</span><a>视频电话</a><span class="sep">|</span><a>小米后院</a><span class="sep">|</span><a>小米天猫店</a><span class="sep">|</span><a>小米淘宝直营店</a><span class="sep">|</span><a>小米网盟</a><span class="sep">|</span><a>问题反馈</a><span class="sep">|</span><a>Select Region</a>            
+                        </p>
+                        <p class="copy-right">©<a>mi.com</a> 京ICP证110507号 京ICP备10046444号 <a>京公网安备11010802020134号 </a><a>京网文[2014]0059-0009号</a>
+                        <br> 违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+                    </div>
+                    <div class="info-link">
+                        <a ><img src="images/foot1.png" alt=""></a>
+                        <a ><img src="images/foot2.png" alt="诚信网站"></a>
+                        <a ><img src="images/foot3.png" alt="可信网站"></a>
+                        <a ><img src="images/foot4.png" alt="网上交易保障中心"></a>
+                    </div>
+                </div>
+                <div class="tansuo">探索黑科技，小米为发烧而生</div>
+            </div>
+        </div>
+        <div class="leftsite-nav">
+            <ul id="leftsite-list">
+                <li><a href="javascript:void(0)">返回顶部</a><em>TOP</em></li>
+                <li><a href="javascript:void(0)">明星单品</a><em>1F</em></li>
+                <li><a href="javascript:void(0)">智能硬件</a><em>2F</em></li>
+                <li><a href="javascript:void(0)">搭配</a><em>3F</em></li>
+                <li><a href="javascript:void(0)">配件</a><em>4F </em></li>
+                <li><a href="javascript:void(0)">周边</a><em>5F</em> </li>
+                <li><a href="javascript:void(0)">为你推荐</a><em>6F</em></li>
+                <li><a href="javascript:void(0)">内容</a><em>7F</em></li>
+                <li><a href="javascript:void(0)">视频</a><em>8F</em></li>
+            </ul>
+        </div>
+
+    <script type="text/javascript" src="js/xiaomi-jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/messages_zh.js"></script>          
+<script type="text/javascript">
+        $.validator.addMethod('isPhone',function(value,element){
+        var tel=/^1\d{10}/;
+        return this.optional(element)||(tel.test(value))
+    },"电话号码格式不正确！");
+    $("#zc-main-form").validate({
+        onkeyup  : false,
+        rules:{
+            zcname:{
+                required:true,
+                minlength:11,
+                maxlength:11,
+                isPhone:true,
+                remote: {
+                        url: "/checkName",          //后台处理程序
+                        type: "post",               //数据发送方式
+                        dataType: "text",           //接受数据格式   
+                        data: {                     //要传递的数据
+                            name: function() {
+                                return $("#zcuname").val();
+                            }
+                        },
+                        dataFilter: function(data){
+                          console.log(data);
+                          eval("var resultObj = "+data);
+                          var result = resultObj.result.status;
+                          if(result==1){
+                            return true;
+                          }else{
+                            return false;
+                          }
+                        }
+                }
+            },
+            zcpwd:{
+                required:true,
+                minlength:6,
+                maxlength:18,
+            },
+            repzcpwd:{
+                required:true,
+                minlength:6,
+                maxlength:18,
+                equalTo:"#zcpwd",
+            }
+        },
+        messages:{
+            zcname:{
+                required:"必填！",
+                remote:"账号已存在不能注册"
+            },
+            zcpwd:{
+                required:"必填！"
+            },
+            repzcpwd:{
+                required:"必填！",
+                equalTo:"密码不一致，请重新输入！"
+            }
+        },
+        submitHandler: function(form){  
+            console.log('s')
+                $.ajax({
+                    //发送请求的方式 post or get
+                    type: "post",
+                    //请求的接口的地址
+                    url: "/registered",
+                    data:{
+                        name:$("#zcuname").val(),
+                        pwd:$("#zcpwd").val()
+                    },
+                    cache: false,
+                    //是否异步
+                    async: true,
+                    //回调函数
+                    success:function(data){
+                        eval("var resultObj = "+ data);
+                        var result = resultObj.result;
+                        if(result.status==1){
+                            $("#zc-page").fadeOut();
+                            $("#zc-main-form")[0].reset();
+                        }else{
+                            $("#zcdis_box").fadeIn().html(result.text);
+                        } 
+                    }
+               })    
+            }  
+    });
+    $("#zcuname").change(function(){
+        if($(this).data("previousValue")){
+          $(this).data("previousValue").old = null;
+        }
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

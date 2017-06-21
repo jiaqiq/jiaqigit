@@ -1,0 +1,19 @@
+1.copy到自己电脑上
+2.当前目录下 shift+右键
+3.node server
+4.打开浏览器 输入：http://localhost:9999/ajax-json.html
+5.自己做的例子必须放在当前目录下
+
+
+====================
+node login-server
+修改下host，绑定下域名
+
+127.0.0.1 www.yunhe.com
+127.0.0.1 yunhe.com
+127.0.0.1 m.yunhe.com
+
+http://yunhe.com:8001/post.html
+http://m.yunhe.com:8001/post.html
+
+cookie在调试工具的resources里面
