@@ -1,0 +1,320 @@
+
+    @font-face {font-family: 'iconfont';
+    src: url('../iconfont/iconfont.eot'); /* IE9*/
+    src: url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+   }
+  .iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  .glyphicon-menu-right{
+      position: relative;
+      top:3px;
+   }
+   .sub-nav{
+    margin-top: 105px;
+    margin-bottom: 0;
+   }
+   .sub-navlist li a{
+    color: #000;
+    font-weight: bold;
+   }
+   @media screen and (max-width: 768px){
+      .sub-navlist{
+        max-width: 390px;
+      }
+      .sub-navlist li{
+        float: left;
+      }
+      .sub-navlist li a{
+        font-weight: 600;
+        font-size: 12px;
+      }
+   }
+   .sub-navlist li a:hover{
+      background: #ff6700;
+      color: #fff;
+   }
+   .banner-one{
+      margin-top: 36px;
+   }
+  .carousel-indicators li{
+    width: 23%;
+    height: 7px;
+    position: relative;
+    top:15px;
+  }
+  .carousel-indicators .active{
+    width: 23%;
+    height: 7px;
+    position: relative;
+    top:15px;
+  }
+  @media screen and (max-width: 768px){
+    .carousel-indicators li{
+    height: 4px;
+   }
+    .carousel-indicators .active{
+    height: 4px;
+   }
+  }
+  @media screen and (max-width: 392px){
+    .carousel-indicators li{
+    height: 4px;
+    width: 20%;
+   }
+    .carousel-indicators .active{
+    height: 4px;
+    width: 20%;
+   }
+  }
+   .glyphicon-chevron-right:before {
+     content: "\e258";
+   }
+   .glyphicon-chevron-left:before {
+     content: "\e257";
+   }
+   .carousel-control.left{
+     width:5%;
+   }
+   .carousel-control.right{
+     width:5%;
+   }
+  .banner-box2 li{
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+  }
+  .banner-box2 .active{
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+  }
+   .core-business hr{
+    margin: 0;
+   }
+   .core-business .tittle-1{
+      margin-top:80px;
+      text-align: center;
+   }
+   .core-content .sub-tittle-1{
+      text-align: center;
+      padding-top: 12px;
+      margin: 0;
+   }
+   .core-content{
+      padding-bottom: 62px;
+   }
+   .yewu{
+    margin-top: 58px;
+   }
+   .yewu .circle-box{
+      text-align: center;
+   }
+   .circle .ic{
+      font-size: 80px;
+      color: #000;
+   }
+   .circle-box .circle{
+      border-radius: 50%;
+      width: 130px;
+      height: 130px;
+      line-height: 120px;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+   }
+   .circle-box .circle:hover{
+      background:#ff6700;
+   }
+   .circle-box p{
+      font-size: 22px;
+   }
+   @media screen and (max-width: 768px){
+     .circle-box .circle{
+      max-width: 65px;
+      max-height: 65px;
+      line-height: 60px;
+     }
+     .circle .ic{
+        font-size:40px;
+     }
+     .circle-box p{
+        font-size: 12px;
+     }
+   }
+   .see-more-box{
+      text-align: center;
+      margin-top: 60px;
+   }
+   .see-more{
+     width: 150px;
+     height: 45px;
+     border: 1px solid #ff6700;
+     color: #ff6700;
+     font-weight: bold;
+     font-size: 20px;
+   }
+   .news-information .tittle-2{
+      padding-top: 24px;
+      padding-bottom: 10px;
+      text-align: center;
+      margin:0;
+   }
+   .news-information hr{
+      margin:0;
+   }
+   .news-information{
+      background: #fff9f5;
+   }
+   .news-content .sub-tittle-2{
+      padding-top: 12px;
+      margin:0;
+      text-align: center;
+   }
+   .news-list .circle{
+      border: 1px solid #ccc;
+      border-radius:50%;
+      width: 70px;
+      height: 70px;
+      text-align: center;
+      float: left;
+      display: inline-block;
+   }
+   .circle-text p{
+      color: #ff6700;
+      margin: 0;
+   }
+   .details p{
+    margin: 0;
+   }
+   .circle-text .p1{
+      font-weight: bold;
+      font-size: 18px;
+      margin-top:5px;
+   }
+   .zixun .news-list{
+      /*border: 1px solid #000;*/
+      height: 120px;
+   }
+   .news-list .details{
+      float: left;
+      margin-left: 5px;
+      color: #000;
+   }
+   .news-list a:hover{
+      background: #fee3ba;
+   }
+   .details .p3{
+      font-weight: bold;
+   }
+   .news-list a{
+      width: 100%;
+      display: inline-block;
+   }
+   .zixun{
+    margin-top:30px;
+   }
+   @media screen and (max-width: 992px){
+      .details{
+        font-size: 12px;
+      }
+   }
+   .coop hr{
+    margin: 0;
+   }
+   .coop .tittle-3{
+      margin-top:60px;
+      text-align: center;
+   }
+   .coop-content .sub-tittle-3{
+      text-align: center;
+      padding-top: 12px;
+      margin: 0;
+   }
+   .huoban{
+    margin-top:62px;
+  }
+  .huoban img{
+    padding:20px;
+  }
+  .footer{
+    margin:0;
+    color: #ccc;
+  }
+  .footer p{
+    font-size: 24px;
+  }
+  .foot-list .copy{
+    text-align: center;
+    margin-top: 82px;
+  }
+  .link-net{
+    position: relative;
+  }
+  .link-net ul:after{
+      content: "";
+      width: 1px;
+      height:60px;
+      background: #000;
+      display: block;
+      position: absolute;
+      left: 120px;
+      top: 10px;
+  }
+  .jumbotron{
+    background: #151515;
+  }
+  /* define bootstrap 7 columns responsive*/
+    .col-xs-1-7,
+    .col-sm-1-7,
+    .col-md-1-7,
+    .col-lg-1-7 {
+      position: relative;
+      min-height: 1px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+ 
+    .col-xs-1-7 {
+      width: 14.2857%;
+      float: left;
+    }
+ 
+    @media (min-width: 768px) {
+    .col-sm-1-7 {
+        width: 14.2857%;
+        float: left;
+      }
+    }
+    @media (min-width: 992px) {
+      .col-md-1-7 {
+        width: 14.2857%;
+        float: left;
+      }
+    }
+    @media (min-width: 1200px) {
+      .col-lg-1-7 {
+        width: 14.2857%;
+        float: left;
+      }
+    }
+    @media screen and (max-width: 768px){
+       .foot-list .copy{
+          margin-top: 62px;
+       }
+       .huoban img{
+        width: 200px;
+        height:72px; 
+       }
+    }
+  
