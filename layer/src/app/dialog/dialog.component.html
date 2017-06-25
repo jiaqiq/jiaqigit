@@ -8,8 +8,9 @@
         <h4 class="modal-title" id="myModalLabel">标题</h4>
       </div>
       <div class="modal-body">
-        <app-dialog-left></app-dialog-left>
-        <app-dialog-center></app-dialog-center>
+        <app-tree (selectedOut)="recSelected($event)"></app-tree>
+        <!--<app-dialog-left></app-dialog-left>-->
+        <app-dialog-center [selected]="selected"></app-dialog-center>
         <app-dialog-right></app-dialog-right>
       </div>
       <div class="modal-footer">

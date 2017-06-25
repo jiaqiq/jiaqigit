@@ -1,0 +1,74 @@
+{
+    "data":
+    [
+        {
+            "id": 1,
+            "label": "公司1",
+            "data": "company1",
+            "expandedIcon": "fa-folder-open",
+            "collapsedIcon": "fa-folder",
+            "children": [{
+                    "id": 11,
+                    "label": "人力资源部1",
+                    "data": "hr1",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [{"label": "Expenses.doc", "icon": "fa-file-word-o", "data": "Expenses Document"}, {"label": "Resume.doc", "icon": "fa-file-word-o", "data": "Resume Document"}]
+                },
+                {   
+                    "id": 12,
+                    "label": "开发部1",
+                    "data": "kf1",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [{"label": "Invoices.txt", "icon": "fa-file-word-o", "data": "Invoices for this month"}]
+                }]
+        },
+       {
+            "id": 2,
+            "label": "公司2",
+            "data": "company2",
+            "expandedIcon": "fa-folder-open",
+            "collapsedIcon": "fa-folder",
+            "children": [{
+                    "id": 21,
+                    "label": "人力资源部2",
+                    "data": "hr2",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [{"label": "Expenses.doc", "icon": "fa-file-word-o", "data": "Expenses Document"}, {"label": "Resume.doc", "icon": "fa-file-word-o", "data": "Resume Document"}]
+                },
+                {
+                    "id": 22,
+                    "label": "开发部2",
+                    "data": "kf2",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [{"label": "Invoices.txt", "icon": "fa-file-word-o", "data": "Invoices for this month"}]
+                }]
+        },
+        {
+            "id": 3,
+            "label": "公司3",
+            "data": "company3",
+            "expandedIcon": "fa-folder-open",
+            "collapsedIcon": "fa-folder",
+            "children": [{
+                    "id": 31,
+                    "label": "人力资源部3",
+                    "data": "hr1",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [{"label": "Expenses.doc", "icon": "fa-file-word-o", "data": "Expenses Document"}, {"label": "Resume.doc", "icon": "fa-file-word-o", "data": "Resume Document"}]
+                },
+                {
+                    "id": 32,
+                    "label": "开发部3",
+                    "data": "kf3",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [{"label": "Invoices.txt", "icon": "fa-file-word-o", "data": "Invoices for this month"}]
+                }]
+        }
+    ]
+}

@@ -1,3 +1,7 @@
 <div class="col-sm-4 dialog-center">
-
+    <h3>selecte</h3>
+   <ul>
+     <li *ngFor="let employee of employees"><a href="javascript:void(0);">{{employee.name}}年龄：{{employee.age}}性别：{{employee.gender}}</a></li>
+   </ul>
+    <div>节点id为：{{selected.id}}节点label为：{{selected.label}}节点data为：{{selected.data}}</div>
 </div>

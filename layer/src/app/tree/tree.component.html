@@ -1,0 +1,8 @@
+<div class="col-sm-4">
+  <h3>Single Selection</h3>
+  <p-tree [value]="trees2" selectionMode="single" [(selection)]="selectedFile"
+      (onNodeSelect)="nodeSelect($event)" (onNodeUnselect)="nodeUnselect($event)">
+  </p-tree>
+  <div style="margin-top:8px">Selected Node: {{selectedFile ? selectedFile.id : 'none'}}</div>
+
+</div>

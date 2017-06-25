@@ -1,0 +1,46 @@
+{
+    "data": [
+        {"company1": [
+            {"department1": [
+              {"id": 1, "name": "张三1", "age": 20, "gender": "男"},
+              {"id": 2, "name": "李四1", "age": 25, "gender": "女"},
+              {"id": 3, "name": "王五1", "age": 28, "gender": "男"},
+              {"id": 4, "name": "赵六1", "age": 30, "gender": "女"}
+            ]},
+            {"department2": [
+              {"id": 1, "name": "张三2", "age": 21, "gender": "男"},
+              {"id": 2, "name": "李四2", "age": 26, "gender": "女"},
+              {"id": 3, "name": "王五2", "age": 29, "gender": "男"},
+              {"id": 4, "name": "赵六2", "age": 31, "gender": "女"} 
+            ]}
+        ]},
+        {"company2": [
+            {"department1": [
+              {"id": 1, "name": "张三3", "age": 20, "gender": "男"},
+              {"id": 2, "name": "李四3", "age": 25, "gender": "女"},
+              {"id": 3, "name": "王五3", "age": 28, "gender": "男"},
+              {"id": 4, "name": "赵六3", "age": 30, "gender": "女"}
+            ]},
+            {"department2": [
+              {"id": 1, "name": "张三4", "age": 21, "gender": "男"},
+              {"id": 2, "name": "李四4", "age": 26, "gender": "女"},
+              {"id": 3, "name": "王五4", "age": 29, "gender": "男"},
+              {"id": 4, "name": "赵六4", "age": 31, "gender": "女"} 
+            ]}
+        ]},
+        {"company3": [
+            {"department1": [
+              {"id": 1, "name": "张三5", "age": 20, "gender": "男"},
+              {"id": 2, "name": "李四5", "age": 25, "gender": "女"},
+              {"id": 3, "name": "王五5", "age": 28, "gender": "男"},
+              {"id": 4, "name": "赵六5", "age": 30, "gender": "女"}
+            ]},
+            {"department2": [
+              {"id": 1, "name": "张三6", "age": 21, "gender": "男"},
+              {"id": 2, "name": "李四6", "age": 26, "gender": "女"},
+              {"id": 3, "name": "王五6", "age": 29, "gender": "男"},
+              {"id": 4, "name": "赵六6", "age": 31, "gender": "女"} 
+            ]}
+        ]}
+    ]
+}
