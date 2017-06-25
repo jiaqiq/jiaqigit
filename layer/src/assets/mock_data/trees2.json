@@ -56,7 +56,7 @@
             "children": [{
                     "id": 31,
                     "label": "人力资源部3",
-                    "data": "hr1",
+                    "data": "hr3",
                     "expandedIcon": "fa-folder-open",
                     "collapsedIcon": "fa-folder",
                     "children": [{"label": "Expenses.doc", "icon": "fa-file-word-o", "data": "Expenses Document"}, {"label": "Resume.doc", "icon": "fa-file-word-o", "data": "Resume Document"}]

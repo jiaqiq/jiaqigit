@@ -21,6 +21,7 @@ export class DialogCenterComponent implements OnInit {
 
    @Input()
    selected: Selected;
+      // selected: any;
 
   constructor(private http: Http) { }
 

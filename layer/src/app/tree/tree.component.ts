@@ -16,28 +16,26 @@ export class TreeComponent implements OnInit {
   trees2: TreeNode[];
 
   @Output()
-  selectedOut:EventEmitter<Selected> = new EventEmitter();
+    selectedOut:EventEmitter<Selected> = new EventEmitter();
+    //  selectedOut:EventEmitter<any> = new EventEmitter();
 
 
     constructor(private treeService: TreeService) { }
-    
+
     ngOnInit() {
         this.treeService.getFiles().then(trees2 => this.trees2 = trees2);
     }
 
-    nodeSelect(event) {
-       this.selectedOut.emit(new Selected(event.node.id, event.node.label, event.node.data));
-
-      //  if(event.node.id == 11) {
-      //     this.getEmployees().then(employees => this.employees = employees);
-      //  }
+    nodeSelect(event): void {
+      //  this.selectedOut.emit(new Selected(event.node.id, event.node.label, event.node.data));
+      this.selectedOut.emit(event.node);
     }
 
     // nodeSelect(event) {
     //     this.msgs = [];
     //     this.msgs.push({severity: 'info', summary: 'Node Selected', detail: event.node.label});
     // }
-    
+
     // nodeUnselect(event) {
     //     this.msgs = [];
     //     this.msgs.push({severity: 'info', summary: 'Node Unselected', detail: event.node.label});
@@ -51,7 +49,10 @@ export class Selected {
   constructor(
     public id: number,
     public label: string,
-    public data: string
+    public data: any,
+    public expandedIcon: string,
+    public collapsedIcon: string,
+    public children: Array<object>
   ) {
 
   }

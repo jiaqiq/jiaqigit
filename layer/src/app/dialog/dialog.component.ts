@@ -9,7 +9,7 @@ import { Selected } from '../tree/tree.component';
 })
 export class DialogComponent implements OnInit {
 
-selected: Selected = new Selected(null, "", "");
+selected: Selected = new Selected(null, "", "", "", "", [{}, {}]);
 
   constructor() { }
 
