@@ -1,0 +1,50 @@
+三：Angular Route 导航
+
+ng new router  --routing
+
+路由基础知识
+
+关于路由的 5 个对象 ，用来处理路由的功能
+1.
+名称： Routes
+简介：路由配置，保存着哪个URL对应展示哪个组件，以及在哪个RouterOutlet中展示组件。
+2.
+名称：RouterOutlet
+简介：在Html中标记路由内容呈现位置的占位符指令。
+3.
+名称：Router   private router: Router注入拿到对象
+简介：负责在运行时执行路由的对象，可以通过调用其navigate()和navigateByUrl()方法来导航到一个指定的路由。
+4.
+名称：RouterLink  参数是一个数组可以传递参数
+简介：在Html中声明路由导航用的指令。
+5.
+名称：ActivatedRoute
+简介：当前激活的路由对象，保存着当前路由的信息，如路由地址，路由参数等。
+
+
+在路由时传递数据 3 种
+1.
+在查询参数中传递数据
+/product?id=1&name=2 => ActivatedRoute.queryParams[id]
+2.
+在路由路径中传递数据
+｛path:/product/:id｝=> /product/1 => ActivatedRoute.params[id]
+3.
+在路由配置中传递数据
+｛path:/product, component: ProductComponent, data:[{isProd: true}]｝=> ActivatedRoute.data[0][idProd]
+
+
+private routeInfo: ActivatedRoute
+参数快照snapshot
+this.routeInfo.snapshot.params["id"]
+ and 参数订阅
+this.routeInfo.params.subscribe((params: Params) => this.productId = params.["id"]);
+
+重定向路由
+｛path: "", redirectTo: "/home", pathMatch: "full"｝,
+
+
+
+
+
+
